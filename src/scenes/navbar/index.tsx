@@ -1,7 +1,11 @@
 import { CalendarDaysIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import Link from "./Link";
 
-type Props = {};
-const index = (props: Props) => {
+type Props = {
+  selectedPage: SelectedPage;
+  setSelectedPage: (value: SelectedPage) => void;
+};
+const index = ({ selectedPage, setSelectedPage }: Props) => {
   return (
     <nav className="">
       <div className="mx-auto mt-8 flex w-8/12 basis-2/5 items-center justify-between rounded-lg bg-white px-7 py-5">
@@ -27,8 +31,36 @@ const index = (props: Props) => {
       </div>
       <div className="mx-auto basis-2/5">
         <div className="flex gap-20">
-          <div>Home</div>
-          <div>About Us</div>
+          <Link
+            page="Home"
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+          <Link
+            page="About Us"
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+          <Link
+            page="Vision"
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+          <Link
+            page="Promotions"
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+          <Link
+            page="Patients"
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+          <Link
+            page="Contact"
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
         </div>
       </div>
     </nav>
