@@ -2,9 +2,12 @@ import {
   CalendarDaysIcon,
   XMarkIcon,
   Bars3Icon,
+  DivideIcon,
 } from "@heroicons/react/24/solid";
 import Link from "./Link";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import { useState } from "react";
+import { SelectedPage } from "../../shared/types";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -12,7 +15,7 @@ type Props = {
 };
 const index = ({ selectedPage, setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-
+  const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   return (
     <nav className="">
       <div className="w-full md:mt-8">
@@ -55,8 +58,9 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
+            {/* <div className="text-nowrap"></div> */}
             <Link
-              page="About Us"
+              page="About"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -100,8 +104,55 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                 />
               </div>
             </div>
-            <div className="hover:bg-primary-500 px-5 py-4 transition duration-300 hover:cursor-pointer hover:text-white">
+            <button
+              className="hover:bg-primary-500 px-5 py-4 transition duration-300 hover:cursor-pointer hover:text-white"
+              onClick={() => setIsMenuToggled(!isMenuToggled)}
+            >
               <Bars3Icon className="h-6 w-6" />
+            </button>
+          </div>
+        )}
+        {/* MOBILE MENU MODAL */}
+        {!isAboveMediumScreens && isMenuToggled && (
+          <div className="bg-primary-100 fixed bottom-0 right-0 z-40 h-full w-[300px] drop-shadow-xl">
+            {/* CLOSE ICON */}
+            <div className="m-6 flex justify-end p-4">
+              <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                <XMarkIcon className="h-6 w-6 text-gray-600" />
+              </button>
+            </div>
+            {/* MENU ITEMS */}
+            <div className="flex flex-col items-center underline underline-offset-4">
+              <Link
+                page="Home"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="About Us"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Vision"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Promotions"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Patients"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Contact"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
             </div>
           </div>
         )}
