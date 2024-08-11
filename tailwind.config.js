@@ -18,10 +18,16 @@ export default {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+      },
     },
-    // backgroundImage: {
-    //   hero: "url('/HeroImage.jpg')",
-    // },
     screens: {
       xs: "480px",
       sm: "768px",

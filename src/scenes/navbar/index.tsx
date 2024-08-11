@@ -26,7 +26,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
             <div className="text-3xl">DR. RICHARD OPTOMETRY</div>
             <div className="text-nowrap text-lg font-light text-gray-400">
               MEMBER{" "}
-              <span className="text-secondary-400 font-medium">
+              <span className="font-medium text-secondary-400">
                 VISION SOURCE
               </span>{" "}
               NETWORK
@@ -53,7 +53,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
       {/* NAVBAR LINKS */}
       <div className="mx-auto w-full">
         {isAboveMediumScreens ? (
-          <div className="bg-primary-300 mx-auto flex items-center justify-around md:w-4/6">
+          <div className="mx-auto flex items-center justify-around bg-primary-300 md:w-4/6">
             <Link
               page="Home"
               selectedPage={selectedPage}
@@ -87,8 +87,15 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
             />
           </div>
         ) : (
-          <div className="bg-primary-300 mx-auto flex justify-around md:w-5/6">
+          <div className="mx-auto flex justify-around bg-primary-300 md:w-5/6">
             <div className="flex basis-4/5 items-center justify-evenly">
+              <div className="">
+                <Link
+                  page="Home"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+              </div>
               <div className="">
                 <a
                   className="px-16 py-4 transition duration-300 hover:text-white"
@@ -115,7 +122,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
         )}
         {/* MOBILE MENU MODAL */}
         {!isAboveMediumScreens && isMenuToggled && (
-          <div className="bg-primary-300 fixed bottom-0 right-0 z-[100] h-full w-[300px] drop-shadow-xl">
+          <div className="fixed bottom-0 right-0 z-[100] h-full w-[300px] bg-primary-300 drop-shadow-xl">
             {/* CLOSE ICON */}
             <div className="m-6 flex justify-end p-4">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
