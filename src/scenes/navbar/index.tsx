@@ -20,7 +20,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
     <nav className="bg-gray-20">
       {/* <div className="w-full md:mt-8"> */}
       <div className="w-full md:pt-9">
-        <div className="mx-auto flex flex-row items-center justify-between rounded-lg bg-white px-7 py-5 md:w-4/6">
+        <div className="mx-auto flex flex-row items-center justify-between rounded-t-lg bg-white px-7 py-5 md:w-4/6">
           {/* LEFT SIDE */}
           <div className="mx-auto flex select-none flex-col md:mr-10 md:basis-3/5">
             <div className="text-3xl">DR. RICHARD OPTOMETRY</div>

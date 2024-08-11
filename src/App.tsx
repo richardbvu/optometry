@@ -3,6 +3,7 @@ import Navbar from "././scenes/navbar";
 import Home from "./scenes/home";
 import Cards from "./scenes/home/cards/index";
 import HomeInfo from "./scenes/home/homeInfo/index";
+import Footer from "./scenes/footer";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<string>("home");
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <Cards />
       <HomeInfo />
+      <Footer />
     </div>
   );
 }

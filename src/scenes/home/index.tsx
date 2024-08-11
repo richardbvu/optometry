@@ -1,34 +1,7 @@
-// import HeroImage2 from "../../assets/HeroImage2.png";
 import HeroImage from "../../assets/HeroImage.jpg";
-
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { SelectedPage } from "../../shared/types";
-import Card from "../cards/Card";
 import Link from "../navbar/Link";
-
-// import {
-//   ClipboardDocumentCheckIcon,
-//   StarIcon,
-//   ShoppingBagIcon,
-// } from "@heroicons/react/24/solid";
-
-// const cards: Array<ClassType> = [
-//   {
-//     name: "Patient Forms",
-//     description: "Get the forms you need.",
-//     icon: <ClipboardDocumentCheckIcon />,
-//   },
-//   {
-//     name: "Specials",
-//     description: "View our latest deals.",
-//     icon: <StarIcon />,
-//   },
-//   {
-//     name: "Shop Contacts",
-//     description: "Reorder contacts online.",
-//     icon: <ShoppingBagIcon />,
-//   },
-// ];
 
 type Props = {
   selectedPage: SelectedPage;
