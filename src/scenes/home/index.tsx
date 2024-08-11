@@ -1,18 +1,32 @@
-import HeroImage from "../../assets/HeroImage.jpg";
-import HomePageGraphic from "../../assets/HomePageGraphic.png";
+import HeroImage2 from "../../assets/HeroImage2.png";
+
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { SelectedPage } from "../../shared/types";
+import Card from "../cards/Card";
 import Link from "../navbar/Link";
 
 import {
-  CalendarDaysIcon,
-  XMarkIcon,
-  Bars3Icon,
-  DivideIcon,
+  ClipboardDocumentCheckIcon,
+  StarIcon,
+  ShoppingBagIcon,
 } from "@heroicons/react/24/solid";
 
 const cards: Array<ClassType> = [
-  { name: "Patient Forms", description: "Get the forms you need." },
+  {
+    name: "Patient Forms",
+    description: "Get the forms you need.",
+    icon: <ClipboardDocumentCheckIcon />,
+  },
+  {
+    name: "Specials",
+    description: "View our latest deals.",
+    icon: <StarIcon />,
+  },
+  {
+    name: "Shop Contacts",
+    description: "Reorder contacts online.",
+    icon: <ShoppingBagIcon />,
+  },
 ];
 
 type Props = {
@@ -24,11 +38,13 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <section id="home" className="">
-      <div className="md:bg-gray-20 w-full">
+      <div className="md:bg-gray-20 w-full pb-[500px]">
+        {/* PADDING BOTTOM FOR HOME TO LOOK GOOD */}
         <div className="relative mx-auto w-4/6">
           {isAboveMediumScreens ? (
             // <img className="w-full" src={HeroImage} alt="hero-image" />
-            <img className="w-full" src={HeroImage} alt="hero-image" />
+            // <img className="w-full" src={HeroImage} alt="hero-image" />
+            <img className="w-full" src={HeroImage2} alt="hero-image" />
           ) : (
             ""
           )}
@@ -47,8 +63,8 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
                   the quality of vision care you deserve.
                 </p>
                 {/* ACTION BUTTONS */}
-                <div className="absolute right-[15%] top-[280px] flex flex-row gap-10">
-                  <div className="bg-primary-300 mx-auto flex w-[100px] items-center justify-between">
+                <div className="absolute right-[12%] top-[280px] flex flex-row gap-10">
+                  <div className="bg-primary-300 mx-auto flex w-[130px] items-center justify-center">
                     <Link
                       page="Appointments"
                       selectedPage={selectedPage}
@@ -62,11 +78,18 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
                     </a>
                   </div>
                 </div>
-                <div className="absolute bottom-[100px] left-[100px] z-40">
-                  <div className="flex gap-20">
-                    <div className="bg-white p-[100px]">BLOCK</div>
-                    <div className="bg-white p-[100px]">BLOCK</div>
-                    <div className="bg-white p-[100px]">BLOCK</div>
+                <div className="bg-gray-20 absolute bottom-[-200px] z-40 mx-auto w-full">
+                  <div className="">
+                    <ul className="mx-auto flex items-center justify-around">
+                      {cards.map((card, index) => (
+                        <Card
+                          key={index}
+                          name={card.name}
+                          description={card.description}
+                          icon={card.icon}
+                        />
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -74,7 +97,7 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
           ) : (
             <div className="mt-10">
               <div className="flex flex-col items-center justify-center">
-                <p className="z-40 flex justify-center text-3xl text-black">
+                <p className="z-40 flex justify-center text-nowrap text-3xl text-black">
                   Experience Modern Eye Care
                 </p>
                 <p className="z-40 mt-5 w-[400px] text-center text-2xl text-gray-400">
@@ -85,7 +108,7 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
                 </p>
                 {/* ACTION BUTTONS */}
                 <div className="mt-10 flex flex-col gap-4">
-                  <div className="bg-primary-300 py-4 text-center">
+                  <div className="bg-primary-300 px-[30px] py-4 text-center">
                     <Link
                       page="Appointments"
                       selectedPage={selectedPage}

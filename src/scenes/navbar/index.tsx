@@ -53,7 +53,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
       {/* NAVBAR LINKS */}
       <div className="mx-auto w-full">
         {isAboveMediumScreens ? (
-          <div className="bg-primary-300 mx-auto flex items-center justify-between md:w-4/6">
+          <div className="bg-primary-300 mx-auto flex items-center justify-around md:w-4/6">
             <Link
               page="Home"
               selectedPage={selectedPage}
@@ -91,7 +91,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
             <div className="flex basis-4/5 items-center justify-evenly">
               <div className="">
                 <a
-                  className="hover:bg-primary-500 px-16 py-4 transition duration-300 hover:text-white"
+                  className="px-16 py-4 transition duration-300 hover:text-white"
                   href="tel:3104565590"
                 >
                   Call Us
@@ -106,7 +106,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
               </div>
             </div>
             <button
-              className="hover:bg-primary-500 px-5 py-4 transition duration-300 hover:cursor-pointer hover:text-white"
+              className="px-5 py-4 transition duration-300 hover:cursor-pointer hover:text-white"
               onClick={() => setIsMenuToggled(!isMenuToggled)}
             >
               <Bars3Icon className="h-6 w-6" />
@@ -115,7 +115,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
         )}
         {/* MOBILE MENU MODAL */}
         {!isAboveMediumScreens && isMenuToggled && (
-          <div className="bg-primary-100 fixed bottom-0 right-0 z-40 h-full w-[300px] drop-shadow-xl">
+          <div className="bg-primary-300 fixed bottom-0 right-0 z-[100] h-full w-[300px] drop-shadow-xl">
             {/* CLOSE ICON */}
             <div className="m-6 flex justify-end p-4">
               <button onClick={() => setIsMenuToggled(!isMenuToggled)}>

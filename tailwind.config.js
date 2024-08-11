@@ -26,6 +26,8 @@ export default {
       xs: "480px",
       sm: "768px",
       md: "1060px",
+      md: "1060px",
+      // md: "980px",
     },
   },
   plugins: [],
