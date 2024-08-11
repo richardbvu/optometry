@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Navbar from "././scenes/navbar";
 import Home from "./scenes/home";
-import Cards from "./scenes/cards";
+import Cards from "./scenes/home/cards/index";
+import HomeInfo from "./scenes/home/homeInfo/index";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<string>("home");
@@ -11,6 +12,7 @@ function App() {
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <Home />
       <Cards />
+      <HomeInfo />
     </div>
   );
 }

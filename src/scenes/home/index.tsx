@@ -101,10 +101,10 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
           ) : (
             <div className="mt-10">
               <div className="flex flex-col items-center justify-center">
-                <p className="z-40 flex justify-center text-nowrap text-3xl text-black">
+                <p className="z-40 flex justify-center text-nowrap text-3xl text-gray-500">
                   Experience Modern Eye Care
                 </p>
-                <p className="z-40 mt-5 w-[400px] text-center text-2xl text-gray-400">
+                <p className="z-40 mt-5 w-full text-center text-2xl text-gray-400">
                   Dr. Richard Optometry offers comprehensive eye care services
                   and in-demand lenses and frames to Torrance and the
                   surrounding communities. Click or call to connect, and access
