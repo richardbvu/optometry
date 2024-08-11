@@ -1,7 +1,11 @@
 type Props = {};
 
 const Home = (props: Props) => {
-  return <div>Home</div>;
+  return (
+    <section id="home" className="">
+      Home
+    </section>
+  );
 };
 
 export default Home;

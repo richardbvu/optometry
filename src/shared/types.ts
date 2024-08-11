@@ -5,4 +5,5 @@ export enum SelectedPage {
   Promotions = "promotions",
   Patients = "patients",
   Contact = "contact",
+  Appointments = "appointments",
 }
