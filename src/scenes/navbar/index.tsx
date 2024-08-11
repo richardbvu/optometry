@@ -17,12 +17,13 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   return (
-    <nav className="">
-      <div className="w-full md:mt-8">
-        <div className="mx-auto flex flex-row items-center justify-between rounded-lg bg-white px-7 py-5 md:w-5/6">
+    <nav className="bg-gray-20">
+      {/* <div className="w-full md:mt-8"> */}
+      <div className="w-full md:pt-9">
+        <div className="mx-auto flex flex-row items-center justify-between rounded-lg bg-white px-7 py-5 md:w-4/6">
           {/* LEFT SIDE */}
-          <div className="mx-auto flex select-none flex-col md:basis-3/5">
-            <div className="text-nowrap text-3xl">DR. RICHARD OPTOMETRY</div>
+          <div className="mx-auto flex select-none flex-col md:mr-10 md:basis-3/5">
+            <div className="text-3xl">DR. RICHARD OPTOMETRY</div>
             <div className="text-nowrap text-lg font-light text-gray-400">
               MEMBER{" "}
               <span className="text-secondary-400 font-medium">
@@ -33,7 +34,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
           </div>
           {/* RIGHT SIDE */}
           {isAboveMediumScreens ? (
-            <div className="flex basis-2/5 items-center justify-end gap-8">
+            <div className="flex basis-2/5 items-center justify-end gap-4">
               <a href="tel:3104565590" className="text-nowrap text-lg">
                 (310) 456-5590
               </a>
@@ -52,7 +53,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
       {/* NAVBAR LINKS */}
       <div className="mx-auto w-full">
         {isAboveMediumScreens ? (
-          <div className="bg-primary-300 mx-auto flex items-center justify-between md:w-5/6">
+          <div className="bg-primary-300 mx-auto flex items-center justify-between md:w-4/6">
             <Link
               page="Home"
               selectedPage={selectedPage}

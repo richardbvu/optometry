@@ -19,6 +19,9 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
       },
     },
+    // backgroundImage: {
+    //   hero: "url('/HeroImage.jpg')",
+    // },
     screens: {
       xs: "480px",
       sm: "768px",
