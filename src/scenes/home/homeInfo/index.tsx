@@ -7,7 +7,7 @@ const homeInfo = (props: Props) => {
   return (
     <section className="">
       <div className="w-full md:bg-gray-20">
-        <div className="mx-auto w-4/6 bg-white">
+        <div className="mx-auto w-4/6 bg-white pb-10">
           <div className="flex flex-col gap-5 pt-10 md:ml-10 md:w-3/4">
             <p className="text-3xl">Dr. Richard Imamoto Optometry Services</p>
             <p>

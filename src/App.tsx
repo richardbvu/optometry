@@ -1,21 +1,40 @@
 import { useState } from "react";
 import Navbar from "././scenes/navbar";
 import Home from "./scenes/home";
-import Cards from "./scenes/home/cards/index";
-import HomeInfo from "./scenes/home/homeInfo/index";
 import Footer from "./scenes/footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./scenes/about";
+import Vision from "./scenes/vision";
+import Promotions from "./scenes/promotions";
+import Appointments from "./scenes/appointments";
+import Contact from "./scenes/contact";
+import Patients from "./scenes/patients";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<string>("home");
   return (
-    <div className="app">
-      {/* <div className="app bg-gray-20"> */}
-      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-      <Home />
-      <Cards />
-      <HomeInfo />
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+
+        <Route path="about" element={<About />}></Route>
+        <Route path="vision" element={<Vision />}></Route>
+        <Route path="promotions" element={<Promotions />}></Route>
+        <Route path="patients" element={<Patients />}></Route>
+        <Route path="contact" element={<Contact />}></Route>
+        <Route path="appointments" element={<Appointments />}></Route>
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
+
+    // <div className="app">
+    //   <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+    //   <Home />
+    //   <Cards />
+    //   <HomeInfo />
+    //   <Footer />
+    // </div>
   );
 }
 

@@ -32,7 +32,7 @@ const index = ({}: Props) => {
     <section className="bg-gray-20">
       {isAboveMediumScreens ? (
         <div className="w-full">
-          <ul className="mx-auto flex w-4/6 items-center justify-around bg-white">
+          <ul className="mx-auto flex w-4/6 items-center justify-around bg-white md:pt-7">
             {cards.map((card, index) => (
               <Card
                 key={index}

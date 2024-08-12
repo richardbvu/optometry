@@ -4,10 +4,11 @@ import {
   Bars3Icon,
   DivideIcon,
 } from "@heroicons/react/24/solid";
-import Link from "./Link";
+import Links from "./Link";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { useState } from "react";
 import { SelectedPage } from "../../shared/types";
+import { Link } from "react-router-dom";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -20,28 +21,45 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
     <nav className="bg-gray-20">
       {/* <div className="w-full md:mt-8"> */}
       <div className="w-full md:pt-9">
-        <div className="mx-auto flex flex-row items-center justify-between rounded-t-lg bg-white px-7 py-5 md:w-4/6">
+        <div className="mx-auto flex justify-between rounded-t-lg bg-white px-7 py-5 md:w-4/6">
           {/* LEFT SIDE */}
-          <div className="mx-auto flex select-none flex-col md:mr-10 md:basis-3/5">
-            <div className="text-3xl">DR. RICHARD OPTOMETRY</div>
-            <div className="text-nowrap text-lg font-light text-gray-400">
-              MEMBER{" "}
-              <span className="font-medium text-secondary-400">
-                VISION SOURCE
-              </span>{" "}
-              NETWORK
+          {isAboveMediumScreens ? (
+            <div className="flex flex-col md:mr-10">
+              <Link to={`/`}>
+                <div className="text-3xl">DR. RICHARD OPTOMETRY</div>
+                <div className="text-nowrap text-lg font-light text-gray-400">
+                  MEMBER{" "}
+                  <span className="font-medium text-secondary-400">
+                    VISION SOURCE
+                  </span>{" "}
+                  NETWORK
+                </div>
+              </Link>
             </div>
-          </div>
+          ) : (
+            <div className="mx-auto flex flex-col md:mr-10">
+              <Link to={`/`}>
+                <div className="text-3xl">DR. RICHARD OPTOMETRY</div>
+                <div className="text-nowrap text-lg font-light text-gray-400">
+                  MEMBER{" "}
+                  <span className="font-medium text-secondary-400">
+                    VISION SOURCE
+                  </span>{" "}
+                  NETWORK
+                </div>
+              </Link>
+            </div>
+          )}
           {/* RIGHT SIDE */}
           {isAboveMediumScreens ? (
-            <div className="flex basis-2/5 items-center justify-end gap-4">
+            <div className="flex items-center justify-end gap-4">
               <a href="tel:3104565590" className="text-nowrap text-lg">
                 (310) 456-5590
               </a>
               <button className="flex flex-row rounded border-2 border-slate-200 px-3 py-2 text-lg transition duration-[1000ms] ease-out hover:border-black">
                 <div className="flex gap-2">
                   <CalendarDaysIcon className="h-7 w-7" />
-                  <p>Appointments</p>
+                  <Link to={`appointments`}>Appointments</Link>
                 </div>
               </button>
             </div>
@@ -54,48 +72,29 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
       <div className="mx-auto w-full">
         {isAboveMediumScreens ? (
           <div className="mx-auto flex items-center justify-around bg-primary-300 md:w-4/6">
-            <Link
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            {/* <div className="text-nowrap"></div> */}
-            <Link
-              page="About"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Vision"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Promotions"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Patients"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Contact"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+              <Link to={"/"}>Home</Link>
+            </div>
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+              <Link to={"about"}>About</Link>
+            </div>
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+              <Link to={"vision"}>Vision</Link>
+            </div>
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+              <Link to={"promotions"}>Promotions</Link>
+            </div>
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+              <Link to={"patients"}>Patients</Link>
+            </div>
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+              <Link to={"contact"}>Contact</Link>
+            </div>
           </div>
         ) : (
           <div className="mx-auto flex justify-around bg-primary-300 md:w-5/6">
             <div className="flex basis-4/5 items-center justify-evenly">
-              <div className="">
-                <Link
-                  page="Home"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-              </div>
+              <div className=""></div>
               <div className="">
                 <a
                   className="px-16 py-4 transition duration-300 hover:text-white"
@@ -104,12 +103,8 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                   Call Us
                 </a>
               </div>
-              <div className="">
-                <Link
-                  page="Appointments"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
+              <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+                <Link to={"appointments"}>Appointments</Link>
               </div>
             </div>
             <button
@@ -130,37 +125,45 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
               </button>
             </div>
             {/* MENU ITEMS */}
-            <div className="flex flex-col items-center underline underline-offset-4">
-              <Link
-                page="Home"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="About Us"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Vision"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Promotions"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Patients"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Contact"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
+            <div className="flex flex-col items-center">
+              <div className="mx-auto flex flex-col items-center justify-around bg-primary-300 md:w-4/6">
+                <div
+                  onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  className="w-[130px] py-4 text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                >
+                  <Link to={"/"}>Home</Link>
+                </div>
+                <div
+                  onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  className="w-[130px] py-4 text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                >
+                  <Link to={"about"}>About</Link>
+                </div>
+                <div
+                  onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  className="w-[130px] py-4 text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                >
+                  <Link to={"vision"}>Vision</Link>
+                </div>
+                <div
+                  onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  className="w-[130px] py-4 text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                >
+                  <Link to={"promotions"}>Promotions</Link>
+                </div>
+                <div
+                  onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  className="w-[130px] py-4 text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                >
+                  <Link to={"patients"}>Patients</Link>
+                </div>
+                <div
+                  onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  className="w-[130px] py-4 text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                >
+                  <Link to={"contact"}>Contact</Link>
+                </div>
+              </div>
             </div>
           </div>
         )}

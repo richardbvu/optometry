@@ -1,7 +1,10 @@
 import HeroImage from "../../assets/HeroImage.jpg";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { SelectedPage } from "../../shared/types";
-import Link from "../navbar/Link";
+// import Link from "../navbar/Link";
+import Card from "./cards/index";
+import HomeInfo from "./homeInfo/index";
+import { Link } from "react-router-dom";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -40,11 +43,9 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
                 {/* <div className="absolute right-[12%] top-[280px] flex flex-row gap-10"> */}
                 <div className="absolute right-[calc(100%-315px)] top-[calc(100%+10px)] flex flex-row gap-10">
                   <div className="mx-auto flex w-[45%] items-center justify-center rounded bg-primary-300">
-                    <Link
-                      page="Appointments"
-                      selectedPage={selectedPage}
-                      setSelectedPage={setSelectedPage}
-                    />
+                    <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+                      <Link to={`appointments`}>Appointments</Link>
+                    </div>
                   </div>
                   <div className="">
                     <p className="text-nowrap text-gray-400">
@@ -55,20 +56,6 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
                     </a>
                   </div>
                 </div>
-                {/* <div className="absolute bottom-[-200px] z-40 mx-auto w-full bg-gray-20">
-                  <div className="">
-                    <ul className="mx-auto flex items-center justify-around">
-                      {cards.map((card, index) => (
-                        <Card
-                          key={index}
-                          name={card.name}
-                          description={card.description}
-                          icon={card.icon}
-                        />
-                      ))}
-                    </ul>
-                  </div>
-                </div> */}
               </div>
             </div>
           ) : (
@@ -85,12 +72,10 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
                 </p>
                 {/* ACTION BUTTONS */}
                 <div className="mt-10 flex flex-col gap-4">
-                  <div className="bg-primary-300 px-[30px] py-4 text-center">
-                    <Link
-                      page="Appointments"
-                      selectedPage={selectedPage}
-                      setSelectedPage={setSelectedPage}
-                    />
+                  <div className="rounded bg-primary-300 px-[30px] text-center">
+                    <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+                      <Link to={`appointments`}>Appointments</Link>
+                    </div>
                   </div>
 
                   <div className="text-center">
@@ -105,6 +90,8 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
           )}
         </div>
       </div>
+      <Card />
+      <HomeInfo />
     </section>
   );
 };
