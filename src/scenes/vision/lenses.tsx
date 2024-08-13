@@ -5,7 +5,7 @@ import HyperTextBox from "../../shared/hyperTextBox";
 import LensesOptions from "../../assets/LensesOptions.png";
 
 type Props = {};
-const Vision = (props: Props) => {
+const Lenses = (props: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <section>
@@ -290,4 +290,4 @@ const Vision = (props: Props) => {
     </section>
   );
 };
-export default Vision;
+export default Lenses;

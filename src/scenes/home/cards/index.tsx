@@ -25,7 +25,7 @@ const cards: Array<ClassType> = [
 ];
 
 type Props = {};
-const index = ({}: Props) => {
+const Cards = ({}: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     // <div className="absolute bottom-[-200px] z-40 mx-auto w-full bg-gray-20">
@@ -58,19 +58,6 @@ const index = ({}: Props) => {
         </div>
       )}
     </section>
-
-    // <div className="">
-    //   <ul className="mx-auto flex w-4/6 items-center justify-around">
-    //     {cards.map((card, index) => (
-    //       <Card
-    //         key={index}
-    //         name={card.name}
-    //         description={card.description}
-    //         icon={card.icon}
-    //       />
-    //     ))}
-    //   </ul>
-    // </div>
   );
 };
-export default index;
+export default Cards;

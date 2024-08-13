@@ -2,7 +2,7 @@ import { ClockIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
 type Props = {};
-const homeInfo = (props: Props) => {
+const HomeInfo = (props: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <section className="">
@@ -174,4 +174,4 @@ const homeInfo = (props: Props) => {
   );
 };
 
-export default homeInfo;
+export default HomeInfo;

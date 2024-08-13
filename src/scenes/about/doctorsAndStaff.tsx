@@ -1,10 +1,9 @@
-import { CalendarDaysIcon } from "@heroicons/react/24/solid";
 import { Link, NavLink } from "react-router-dom";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import RequestAppointment from "../../shared/requestAppointment";
 
 type Props = {};
-const doctorsAndStaff = (props: Props) => {
+const DoctorsAndStaff = (props: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <section>
@@ -77,4 +76,4 @@ const doctorsAndStaff = (props: Props) => {
     </section>
   );
 };
-export default doctorsAndStaff;
+export default DoctorsAndStaff;

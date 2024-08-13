@@ -2,11 +2,8 @@ import { Link } from "react-router-dom";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 
-type Props = {
-  selectedPage: SelectedPage;
-  setSelectedPage: (value: SelectedPage) => void;
-};
-const Footer = ({ selectedPage, setSelectedPage }: Props) => {
+type Props = {};
+const Footer = (props: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <footer className="bg-gray-50">

@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 type Props = {};
-const index = (props: Props) => {
+const Navbar = (props: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   return (
@@ -248,4 +248,4 @@ const index = (props: Props) => {
     </nav>
   );
 };
-export default index;
+export default Navbar;
