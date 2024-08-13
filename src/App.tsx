@@ -9,16 +9,28 @@ import Promotions from "./scenes/promotions";
 import Appointments from "./scenes/appointments";
 import Contact from "./scenes/contact";
 import Patients from "./scenes/patients";
+import { SelectedPage } from "./shared/types";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<string>("home");
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home,
+  );
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-
-        <Route path="about" element={<About />}></Route>
+        <Route
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+          path="/"
+          element={<Home />}
+        ></Route>
+        <Route
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+          path="about"
+          element={<About />}
+        ></Route>
         <Route path="vision" element={<Vision />}></Route>
         <Route path="promotions" element={<Promotions />}></Route>
         <Route path="patients" element={<Patients />}></Route>

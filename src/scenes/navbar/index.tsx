@@ -2,13 +2,12 @@ import {
   CalendarDaysIcon,
   XMarkIcon,
   Bars3Icon,
-  DivideIcon,
 } from "@heroicons/react/24/solid";
-import Links from "./Link";
+
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { useState } from "react";
 import { SelectedPage } from "../../shared/types";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -19,7 +18,6 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   return (
     <nav className="bg-gray-20">
-      {/* <div className="w-full md:mt-8"> */}
       <div className="w-full md:pt-9">
         <div className="mx-auto flex justify-between rounded-t-lg bg-white px-7 py-5 md:w-4/6">
           {/* LEFT SIDE */}
@@ -73,28 +71,73 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
         {isAboveMediumScreens ? (
           <div className="mx-auto flex items-center justify-around bg-primary-300 md:w-4/6">
             <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
-              <Link to={"/"}>Home</Link>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "bg-primary-500 px-9 py-4 font-bold" : ""
+                }
+                to={"/"}
+              >
+                Home
+              </NavLink>
             </div>
             <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
-              <Link to={"about"}>About</Link>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "bg-primary-500 px-9 py-4 font-bold" : ""
+                }
+                setSelectedPage={setSelectedPage}
+                selectedPage={selectedPage}
+                to={"about"}
+              >
+                About
+              </NavLink>
             </div>
             <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
-              <Link to={"vision"}>Vision</Link>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "bg-primary-500 px-9 py-4 font-bold" : ""
+                }
+                to={"vision"}
+              >
+                Vision
+              </NavLink>
             </div>
             <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
-              <Link to={"promotions"}>Promotions</Link>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "bg-primary-500 px-4 py-4 font-bold" : ""
+                }
+                to={"promotions"}
+              >
+                Promotions
+              </NavLink>
             </div>
             <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
-              <Link to={"patients"}>Patients</Link>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "bg-primary-500 px-7 py-4 font-bold" : ""
+                }
+                to={"patients"}
+              >
+                Patients
+              </NavLink>
             </div>
             <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
-              <Link to={"contact"}>Contact</Link>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "bg-primary-500 px-7 py-4 font-bold" : ""
+                }
+                to={"contact"}
+              >
+                Contact
+              </NavLink>
             </div>
           </div>
         ) : (
           <div className="mx-auto flex justify-around bg-primary-300 md:w-5/6">
             <div className="flex basis-4/5 items-center justify-evenly">
               <div className=""></div>
+
               <div className="">
                 <a
                   className="px-16 py-4 transition duration-300 hover:text-white"
@@ -104,7 +147,14 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                 </a>
               </div>
               <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
-                <Link to={"appointments"}>Appointments</Link>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "bg-primary-500 px-5 py-4 font-bold" : ""
+                  }
+                  to={"appointments"}
+                >
+                  Appointments
+                </NavLink>
               </div>
             </div>
             <button
@@ -162,6 +212,12 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                   className="w-[130px] py-4 text-center underline underline-offset-8 transition duration-300 hover:text-white"
                 >
                   <Link to={"contact"}>Contact</Link>
+                </div>
+                <div
+                  onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  className="w-[130px] py-4 text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                >
+                  <Link to={"appointments"}>Appointments</Link>
                 </div>
               </div>
             </div>

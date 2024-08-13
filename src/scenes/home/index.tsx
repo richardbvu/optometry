@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import HeroImage from "../../assets/HeroImage.jpg";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { SelectedPage } from "../../shared/types";
@@ -15,7 +16,10 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <section id="home" className="">
-      <div className="w-full md:bg-gray-20">
+      <motion.div
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+        className="w-full md:bg-gray-20"
+      >
         {/* PADDING BOTTOM FOR HOME TO LOOK GOOD */}
         <div className="relative mx-auto w-4/6">
           {isAboveMediumScreens ? (
@@ -89,7 +93,7 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
             </div>
           )}
         </div>
-      </div>
+      </motion.div>
       <Card />
       <HomeInfo />
     </section>
