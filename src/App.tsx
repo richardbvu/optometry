@@ -10,10 +10,12 @@ import Contact from "./scenes/contact";
 import Patients from "./scenes/patients";
 import DoctorsAndStaff from "./scenes/about/doctorsAndStaff.tsx";
 import AboutLayout from "./scenes/about/aboutLayout.tsx";
+import ScrollToTop from "./hooks/scrollToTop.ts";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>

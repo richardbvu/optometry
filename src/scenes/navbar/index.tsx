@@ -70,7 +70,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
       <div className="mx-auto w-full">
         {isAboveMediumScreens ? (
           <div className="mx-auto flex items-center justify-around bg-primary-300 md:w-4/6">
-            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:cursor-pointer hover:text-white">
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "bg-primary-500 px-9 py-4 font-bold" : ""
@@ -80,7 +80,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                 Home
               </NavLink>
             </div>
-            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:cursor-pointer hover:text-white">
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "bg-primary-500 px-9 py-4 font-bold" : ""
@@ -90,7 +90,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                 About
               </NavLink>
             </div>
-            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:cursor-pointer hover:text-white">
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "bg-primary-500 px-9 py-4 font-bold" : ""
@@ -100,7 +100,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                 Vision
               </NavLink>
             </div>
-            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:cursor-pointer hover:text-white">
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "bg-primary-500 px-4 py-4 font-bold" : ""
@@ -110,7 +110,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                 Promotions
               </NavLink>
             </div>
-            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:cursor-pointer hover:text-white">
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "bg-primary-500 px-7 py-4 font-bold" : ""
@@ -120,7 +120,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                 Patients
               </NavLink>
             </div>
-            <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+            <div className="w-[130px] py-4 text-center transition duration-300 hover:cursor-pointer hover:text-white">
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "bg-primary-500 px-7 py-4 font-bold" : ""
@@ -144,7 +144,7 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                   Call Us
                 </a>
               </div>
-              <div className="w-[130px] py-4 text-center transition duration-300 hover:text-white">
+              <div className="w-[150px] py-4 text-center transition duration-300 hover:cursor-pointer hover:text-white">
                 <NavLink
                   className={({ isActive }) =>
                     isActive ? "bg-primary-500 px-5 py-4 font-bold" : ""
