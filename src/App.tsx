@@ -12,6 +12,11 @@ import DoctorsAndStaff from "./scenes/about/doctorsAndStaff.tsx";
 import ScrollToTop from "./hooks/scrollToTop.ts";
 import Lenses from "./scenes/vision/lenses.tsx";
 import PageLayout from "./shared/pageLayout.tsx";
+import Contacts from "./scenes/vision/contacts.tsx";
+import VisionCorrection from "./scenes/vision/visionCorrection.tsx";
+import EyeConditions from "./scenes/vision/eyeConditions.tsx";
+import EyeDiseases from "./scenes/vision/eyeDiseases.tsx";
+import VisionProblems from "./scenes/vision/visionProblems.tsx";
 
 function App() {
   return (
@@ -20,15 +25,20 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        {/* LAYOUT FOR ABOUT */}
         <Route path="about" element={<PageLayout />}>
           <Route index element={<About />} />
           <Route path="doctors-staff" element={<DoctorsAndStaff />} />
         </Route>
-
-        {/* <Route path="vision" element={<Vision />}></Route> */}
+        {/* LAYOUT FOR VISION */}
         <Route path="vision" element={<PageLayout />}>
           <Route index element={<Vision />} />
           <Route path="lenses" element={<Lenses />} />
+          <Route path="contacts" element={<Contacts />} />
+          <Route path="vision-correction" element={<VisionCorrection />} />
+          <Route path="eye-conditions" element={<EyeConditions />} />
+          <Route path="eye-diseases" element={<EyeDiseases />} />
+          <Route path="vision-problems" element={<VisionProblems />} />
         </Route>
         <Route path="promotions" element={<Promotions />}></Route>
         <Route path="patients" element={<Patients />}></Route>

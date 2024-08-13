@@ -1,5 +1,5 @@
 type Props = {};
 const Contacts = (props: Props) => {
-  return <div>contact</div>;
+  return <div>contacts</div>;
 };
 export default Contacts;

@@ -126,19 +126,43 @@ const Lenses = (props: Props) => {
             </div>
             {/* RIGHT SIDE BAR */}
             <div className="flex basis-1/5 flex-col rounded border-[1px] border-gray-50 p-10 md:ml-5">
-              <div className="mb-[100px] flex flex-col">
-                <div className="mb-4 text-nowrap text-lg font-bold hover:text-primary-500">
+              <div className="mb-[100px] flex flex-col gap-4">
+                <div className="text-nowrap text-lg hover:text-primary-500">
                   <Link to={`/vision`}>Vision Care & Products</Link>
+                </div>
+                <div className="font-bold hover:text-primary-500">
+                  <div className="ml-5">
+                    <NavLink to={"."}>Lenses and Frames</NavLink>
+                  </div>
                 </div>
                 <div className="hover:text-primary-500">
                   <div className="ml-5">
-                    <NavLink
-                      // className={({ isActive, isPending }) => {
-                      //   return isActive ? "ml-5 font-bold" : "";
-                      // }}
-                      to={"."}
-                    >
-                      Lenses and Frames
+                    <NavLink to={"/vision/contacts"}>Contacts</NavLink>
+                  </div>
+                </div>
+                <div className="hover:text-primary-500">
+                  <div className="ml-5">
+                    <NavLink to={"/vision/vision-correction"}>
+                      Vision Correction
+                    </NavLink>
+                  </div>
+                </div>
+                <div className="hover:text-primary-500">
+                  <div className="ml-5">
+                    <NavLink to={"/vision/eye-conditions"}>
+                      Eye Conditions
+                    </NavLink>
+                  </div>
+                </div>
+                <div className="hover:text-primary-500">
+                  <div className="ml-5">
+                    <NavLink to={"/vision/eye-diseases"}>Eye Diseases</NavLink>
+                  </div>
+                </div>
+                <div className="hover:text-primary-500">
+                  <div className="ml-5">
+                    <NavLink to={"/vision/vision-problems"}>
+                      Vision Problems
                     </NavLink>
                   </div>
                 </div>
@@ -156,7 +180,6 @@ const Lenses = (props: Props) => {
               <p className="text-2xl text-gray-400">
                 A brief description of the types of lenses and variety of frames
                 available at Dr. Richard Imamoto Optometry in Torrance.
-                {/* CONTROL + SHIFT + L = FIND ALL INSTANCES */}
               </p>
               <p className="">
                 Selecting your lenses and frames is a very personal choice. A
@@ -264,19 +287,43 @@ const Lenses = (props: Props) => {
             </div>
             {/* RIGHT SIDE MEDIA QUERY*/}
             <div className="flex basis-1/5 flex-col rounded border-[1px] border-gray-50 p-10 md:ml-5">
-              <div className="mb-[100px] flex flex-col">
-                <div className="mb-4 text-nowrap text-lg font-bold hover:text-primary-500">
+              <div className="mb-[100px] flex flex-col gap-4">
+                <div className="text-nowrap text-lg hover:text-primary-500">
                   <Link to={`/vision`}>Vision Care & Products</Link>
+                </div>
+                <div className="font-bold hover:text-primary-500">
+                  <div className="ml-5">
+                    <NavLink to={"."}>Lenses and Frames</NavLink>
+                  </div>
                 </div>
                 <div className="hover:text-primary-500">
                   <div className="ml-5">
-                    <NavLink
-                      // className={({ isActive, isPending }) => {
-                      //   return isActive ? "ml-5 font-bold" : "";
-                      // }}
-                      to={"."}
-                    >
-                      Lenses and Frames
+                    <NavLink to={"/vision/contacts"}>Contacts</NavLink>
+                  </div>
+                </div>
+                <div className="hover:text-primary-500">
+                  <div className="ml-5">
+                    <NavLink to={"/vision/vision-correction"}>
+                      Vision Correction
+                    </NavLink>
+                  </div>
+                </div>
+                <div className="hover:text-primary-500">
+                  <div className="ml-5">
+                    <NavLink to={"/vision/eye-conditions"}>
+                      Eye Conditions
+                    </NavLink>
+                  </div>
+                </div>
+                <div className="hover:text-primary-500">
+                  <div className="ml-5">
+                    <NavLink to={"/vision/eye-diseases"}>Eye Diseases</NavLink>
+                  </div>
+                </div>
+                <div className="hover:text-primary-500">
+                  <div className="ml-5">
+                    <NavLink to={"/vision/vision-problems"}>
+                      Vision Problems
                     </NavLink>
                   </div>
                 </div>
