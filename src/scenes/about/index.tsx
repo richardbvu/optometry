@@ -2,6 +2,7 @@ import { CalendarDaysIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Link, NavLink } from "react-router-dom";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import RequestAppointment from "../../shared/requestAppointment";
+import HyperTextBox from "../../shared/hyperTextBox";
 
 type Props = {};
 const About = (props: Props) => {
@@ -58,21 +59,12 @@ const About = (props: Props) => {
                 our Torrance optometrist office and give your vision the level
                 of care and attention it deserves.
               </p>
-              <Link to={`doctors-staff`}>
-                <div className="flex flex-col gap-4 rounded border-[1px] border-gray-50 p-7 transition duration-[500ms] hover:cursor-pointer hover:border-black hover:text-black">
-                  <div className="flex items-center justify-between">
-                    <p className="text-2xl">Doctors & Staff</p>
-                    <div className="h-6 w-7">
-                      <ArrowRightIcon />
-                    </div>
-                  </div>
-                  <p>
-                    Meet the doctors and staff who make Dr. Richard Imamoto
+              <HyperTextBox
+                title="Doctors & Staff"
+                text="Meet the doctors and staff who make Dr. Richard Imamoto
                     Optometry the leading provider of vision care products and
-                    services in Torrance, California.
-                  </p>
-                </div>
-              </Link>
+                    services in Torrance, California."
+              />
             </div>
             {/* RIGHT SIDE BAR */}
             <div className="flex basis-1/5 flex-col rounded border-[1px] border-gray-50 p-10 md:ml-5">
@@ -147,21 +139,12 @@ const About = (props: Props) => {
                 our Torrance optometrist office and give your vision the level
                 of care and attention it deserves.
               </p>
-              <Link to={`doctors-staff`}>
-                <div className="flex flex-col gap-4 rounded border-[1px] border-gray-50 p-7 transition duration-[500ms] hover:cursor-pointer hover:border-black hover:text-black">
-                  <div className="flex items-center justify-between">
-                    <p className="text-2xl">Doctors & Staff</p>
-                    <div className="h-6 w-7">
-                      <ArrowRightIcon />
-                    </div>
-                  </div>
-                  <p>
-                    Meet the doctors and staff who make Dr. Richard Imamoto
+              <HyperTextBox
+                title="Doctors & Staff"
+                text="Meet the doctors and staff who make Dr. Richard Imamoto
                     Optometry the leading provider of vision care products and
-                    services in Torrance, California.
-                  </p>
-                </div>
-              </Link>
+                    services in Torrance, California."
+              />
             </div>
             {/* RIGHT SIDE BAR */}
             <div className="flex basis-1/5 flex-col rounded border-[1px] border-gray-50 p-10 md:ml-5">
