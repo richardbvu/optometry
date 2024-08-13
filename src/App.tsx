@@ -9,8 +9,9 @@ import Appointments from "./scenes/appointments";
 import Contact from "./scenes/contact";
 import Patients from "./scenes/patients";
 import DoctorsAndStaff from "./scenes/about/doctorsAndStaff.tsx";
-import AboutLayout from "./scenes/about/aboutLayout.tsx";
 import ScrollToTop from "./hooks/scrollToTop.ts";
+import Lenses from "./scenes/vision/lenses.tsx";
+import PageLayout from "./shared/pageLayout.tsx";
 
 function App() {
   return (
@@ -19,12 +20,16 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="about" element={<AboutLayout />}>
+        <Route path="about" element={<PageLayout />}>
           <Route index element={<About />} />
           <Route path="doctors-staff" element={<DoctorsAndStaff />} />
         </Route>
 
-        <Route path="vision" element={<Vision />}></Route>
+        {/* <Route path="vision" element={<Vision />}></Route> */}
+        <Route path="vision" element={<PageLayout />}>
+          <Route index element={<Vision />} />
+          <Route path="lenses" element={<Lenses />} />
+        </Route>
         <Route path="promotions" element={<Promotions />}></Route>
         <Route path="patients" element={<Patients />}></Route>
         <Route path="contact" element={<Contact />}></Route>
