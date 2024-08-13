@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import useMediaQuery from "../../hooks/useMediaQuery";
-import Link from "../navbar/Link";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 
 type Props = {
@@ -13,50 +13,38 @@ const Footer = ({ selectedPage, setSelectedPage }: Props) => {
       <div className="w-full bg-gray-20">
         <div className="mx-auto flex justify-start gap-10 bg-gray-100 p-10 md:w-4/6">
           {isAboveMediumScreens ? (
-            <div className="flex basis-2/5 flex-col items-center gap-5">
+            <div className="flex basis-2/5 flex-col items-center gap-8">
               <div className="flex flex-col items-start gap-5">
-                <p className="text-xl font-bold">Quick Links</p>
-                <div>
-                  <Link
-                    page="Home"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
+                <p className="pl-4 text-xl font-bold">Quick Links</p>
+                <div className="transition duration-300 hover:text-white">
+                  <Link to={`/`} className="py-4 pl-4 pr-4">
+                    Home
+                  </Link>
                 </div>
-                <div>
-                  <Link
-                    page="About"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
+                <div className="transition duration-300 hover:text-white">
+                  <Link to={`about`} className="py-4 pl-4 pr-4">
+                    About
+                  </Link>
                 </div>
-                <div>
-                  <Link
-                    page="Vision"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
+                <div className="transition duration-300 hover:text-white">
+                  <Link to={`vision`} className="py-4 pl-4 pr-4">
+                    Vision
+                  </Link>
                 </div>
-                <div>
-                  <Link
-                    page="Promotions"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
+                <div className="transition duration-300 hover:text-white">
+                  <Link to={`promotions`} className="py-4 pl-4 pr-4">
+                    Promotions
+                  </Link>
                 </div>
-                <div>
-                  <Link
-                    page="Patients"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
+                <div className="transition duration-300 hover:text-white">
+                  <Link to={`patients`} className="py-4 pl-4 pr-4">
+                    Patients
+                  </Link>
                 </div>
-                <div>
-                  <Link
-                    page="Contact"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
+                <div className="transition duration-300 hover:text-white">
+                  <Link to={`Contact`} className="py-4 pl-4 pr-4">
+                    Contact
+                  </Link>
                 </div>
               </div>
             </div>
@@ -72,16 +60,17 @@ const Footer = ({ selectedPage, setSelectedPage }: Props) => {
                   <p>4224 W Artesia Blvd</p>
                   <p>Torrance, CA 90248</p>
                 </div>
-                <p className="pb-4">
-                  <span className="font-bold">Phone :</span> (310) 456-5590
-                </p>
-                <div className="flex w-fit items-center justify-center rounded bg-primary-300 px-[20px] py-[15px] text-center transition duration-300 hover:cursor-pointer hover:text-white">
+                <div>
+                  <span className="font-bold">Phone : </span>
+                  <a href="tel:3104565590">(310) 456-5590</a>
+                </div>
+                <div className="mt-5 flex w-fit items-center justify-center rounded bg-primary-300 px-[20px] py-[15px] text-center transition duration-300 hover:cursor-pointer hover:text-white">
                   <button>
                     <div className="flex gap-5">
                       <div className="h-6 w-6">
                         <EnvelopeIcon />
                       </div>
-                      <p>Email Us</p>
+                      <a href="mailto:staff.richardoptometry.com">Email Us</a>
                     </div>
                   </button>
                 </div>
@@ -96,16 +85,17 @@ const Footer = ({ selectedPage, setSelectedPage }: Props) => {
                   <p>4224 W Artesia Blvd</p>
                   <p>Torrance, CA 90248</p>
                 </div>
-                <p className="pb-4">
-                  <span className="font-bold">Phone :</span> (310) 456-5590
-                </p>
-                <div className="flex w-fit rounded bg-primary-300 px-[20px] py-[15px] text-center transition duration-300 hover:cursor-pointer hover:text-white">
+                <div>
+                  <span className="font-bold">Phone : </span>
+                  <a href="tel:3104565590">(310) 456-5590</a>
+                </div>
+                <div className="mt-5 flex w-fit rounded bg-primary-300 px-[20px] py-[15px] text-center transition duration-300 hover:cursor-pointer hover:text-white">
                   <button>
                     <div className="flex gap-5">
                       <div className="h-6 w-6">
                         <EnvelopeIcon />
                       </div>
-                      <p>Email Us</p>
+                      <a href="mailto:staff.richardoptometry.com">Email Us</a>
                     </div>
                   </button>
                 </div>
