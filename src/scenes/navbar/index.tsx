@@ -85,8 +85,6 @@ const index = ({ selectedPage, setSelectedPage }: Props) => {
                 className={({ isActive }) =>
                   isActive ? "bg-primary-500 px-9 py-4 font-bold" : ""
                 }
-                setSelectedPage={setSelectedPage}
-                selectedPage={selectedPage}
                 to={"about"}
               >
                 About

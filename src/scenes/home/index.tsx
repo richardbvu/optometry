@@ -32,7 +32,7 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
           {/* HOME TEXT  */}
           {isAboveMediumScreens ? (
             <div className="">
-              <div className="absolute left-[calc(43%-10px)] top-[calc(40%-120px)]">
+              <div className="absolute left-[calc(43%-10px)] top-[calc(40%-120px)] md:pr-3">
                 {/* <p className="right-[50px] top-[50px] z-40 w-[400px] text-5xl md:absolute"> */}
                 {/* <p className="right-[5%] top-[25px] z-40 w-[400px] text-5xl md:absolute"> */}
                 <p className="text-5xl">Experience Modern Eye Care</p>

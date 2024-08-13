@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "././scenes/navbar";
 import Home from "./scenes/home";
 import Footer from "./scenes/footer";
@@ -9,28 +8,20 @@ import Promotions from "./scenes/promotions";
 import Appointments from "./scenes/appointments";
 import Contact from "./scenes/contact";
 import Patients from "./scenes/patients";
-import { SelectedPage } from "./shared/types";
+import DoctorsAndStaff from "./scenes/about/doctorsAndStaff.tsx";
+import AboutLayout from "./scenes/about/aboutLayout.tsx";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
-    SelectedPage.Home,
-  );
   return (
     <BrowserRouter>
-      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+      <Navbar />
       <Routes>
-        <Route
-          selectedPage={selectedPage}
-          setSelectedPage={setSelectedPage}
-          path="/"
-          element={<Home />}
-        ></Route>
-        <Route
-          selectedPage={selectedPage}
-          setSelectedPage={setSelectedPage}
-          path="about"
-          element={<About />}
-        ></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="about" element={<AboutLayout />}>
+          <Route index element={<About />} />
+          <Route path="doctors-staff" element={<DoctorsAndStaff />} />
+        </Route>
+
         <Route path="vision" element={<Vision />}></Route>
         <Route path="promotions" element={<Promotions />}></Route>
         <Route path="patients" element={<Patients />}></Route>
