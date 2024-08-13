@@ -35,7 +35,7 @@ const Home = ({ selectedPage, setSelectedPage }: Props) => {
               <div className="absolute left-[calc(43%-10px)] top-[calc(40%-120px)] md:pr-3">
                 {/* <p className="right-[50px] top-[50px] z-40 w-[400px] text-5xl md:absolute"> */}
                 {/* <p className="right-[5%] top-[25px] z-40 w-[400px] text-5xl md:absolute"> */}
-                <p className="text-5xl">Experience Modern Eye Care</p>
+                <p className="w-[400px] text-5xl">Experience Modern Eye Care</p>
                 {/* <p className="absolute right-[5%] top-[110px] z-40 mt-5 w-[400px] text-lg"> */}
                 <p className="mt-5 w-[95%] text-lg">
                   Dr. Richard Optometry offers comprehensive eye care services

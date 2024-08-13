@@ -12,6 +12,7 @@ const Footer = ({ selectedPage, setSelectedPage }: Props) => {
     <footer className="bg-gray-50">
       <div className="w-full bg-gray-20">
         <div className="mx-auto flex justify-start gap-10 bg-gray-100 p-10 md:w-4/6">
+          {/* FOOTER LEFT SIDE */}
           {isAboveMediumScreens ? (
             <div className="flex basis-2/5 flex-col items-center gap-8">
               <div className="flex flex-col items-start gap-5">
@@ -42,7 +43,7 @@ const Footer = ({ selectedPage, setSelectedPage }: Props) => {
                   </Link>
                 </div>
                 <div className="transition duration-300 hover:text-white">
-                  <Link to={`Contact`} className="py-4 pl-4 pr-4">
+                  <Link to={`contact`} className="py-4 pl-4 pr-4">
                     Contact
                   </Link>
                 </div>
@@ -51,6 +52,7 @@ const Footer = ({ selectedPage, setSelectedPage }: Props) => {
           ) : (
             ""
           )}
+          {/* FOOTER RIGHT SIDE */}
           {isAboveMediumScreens ? (
             <div className="flex basis-2/5 justify-center">
               <div>
@@ -64,15 +66,16 @@ const Footer = ({ selectedPage, setSelectedPage }: Props) => {
                   <span className="font-bold">Phone : </span>
                   <a href="tel:3104565590">(310) 456-5590</a>
                 </div>
-                <div className="mt-5 flex w-fit items-center justify-center rounded bg-primary-300 px-[20px] py-[15px] text-center transition duration-300 hover:cursor-pointer hover:text-white">
-                  <button>
-                    <div className="flex gap-5">
-                      <div className="h-6 w-6">
-                        <EnvelopeIcon />
-                      </div>
-                      <a href="mailto:staff.richardoptometry.com">Email Us</a>
+                <div className="mt-5">
+                  <a
+                    className="flex w-[150px] items-center justify-center gap-4 rounded bg-primary-300 py-4"
+                    href="mailto:staff.richardoptometry.com"
+                  >
+                    <div className="h-6 w-6">
+                      <EnvelopeIcon />
                     </div>
-                  </button>
+                    Email Us
+                  </a>
                 </div>
               </div>
             </div>
@@ -89,15 +92,16 @@ const Footer = ({ selectedPage, setSelectedPage }: Props) => {
                   <span className="font-bold">Phone : </span>
                   <a href="tel:3104565590">(310) 456-5590</a>
                 </div>
-                <div className="mt-5 flex w-fit rounded bg-primary-300 px-[20px] py-[15px] text-center transition duration-300 hover:cursor-pointer hover:text-white">
-                  <button>
-                    <div className="flex gap-5">
-                      <div className="h-6 w-6">
-                        <EnvelopeIcon />
-                      </div>
-                      <a href="mailto:staff.richardoptometry.com">Email Us</a>
+                <div className="mt-5">
+                  <a
+                    className="flex w-[150px] items-center justify-center gap-4 rounded bg-primary-300 py-4"
+                    href="mailto:staff.richardoptometry.com"
+                  >
+                    <div className="h-6 w-6">
+                      <EnvelopeIcon />
                     </div>
-                  </button>
+                    Email Us
+                  </a>
                 </div>
               </div>
             </div>
