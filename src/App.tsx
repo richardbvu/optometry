@@ -17,6 +17,7 @@ import VisionCorrection from "./scenes/vision/visionCorrection.tsx";
 import EyeConditions from "./scenes/vision/eyeConditions.tsx";
 import EyeDiseases from "./scenes/vision/eyeDiseases.tsx";
 import VisionProblems from "./scenes/vision/visionProblems.tsx";
+import ErrorPage from "./scenes/error/errorPage.tsx";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         {/* LAYOUT FOR ABOUT */}
         <Route path="about" element={<PageLayout />}>
+          {/* INSIDE PAGELAYOUT, THERE MUST BE A <OUTLET/> COMPONENT */}
           <Route index element={<About />} />
           <Route path="doctors-staff" element={<DoctorsAndStaff />} />
         </Route>
@@ -44,6 +46,7 @@ function App() {
         <Route path="patients" element={<Patients />}></Route>
         <Route path="contact" element={<Contact />}></Route>
         <Route path="appointments" element={<Appointments />}></Route>
+        <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>
