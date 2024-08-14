@@ -16,51 +16,33 @@ const Navbar = (props: Props) => {
       <div className="w-full md:pt-9">
         <div className="mx-auto flex justify-between rounded-t-lg bg-white px-6 py-5 md:w-4/6">
           {/* LEFT SIDE */}
-          {isAboveMediumScreens ? (
-            <div className="flex flex-col md:mr-10">
-              <Link to={`/`}>
-                <div className="text-3xl">DR. RICHARD OPTOMETRY</div>
-                <div className="text-nowrap text-lg font-light text-gray-400">
-                  MEMBER{" "}
-                  <span className="font-medium text-secondary-400">
-                    VISION SOURCE
-                  </span>{" "}
-                  NETWORK
-                </div>
-              </Link>
-            </div>
-          ) : (
-            <div className="mx-auto flex flex-col md:mr-10">
-              <Link to={`/`}>
-                <div className="text-3xl">DR. RICHARD OPTOMETRY</div>
-                <div className="text-nowrap text-lg font-light text-gray-400">
-                  MEMBER{" "}
-                  <span className="font-medium text-secondary-400">
-                    VISION SOURCE
-                  </span>{" "}
-                  NETWORK
-                </div>
-              </Link>
-            </div>
-          )}
+          <div className="xs:mx-auto sm:mx-auto md:mx-0">
+            <Link to={`/`}>
+              <div className="text-3xl">DR. RICHARD OPTOMETRY</div>
+              <div className="text-nowrap text-lg font-light text-gray-400">
+                MEMBER{" "}
+                <span className="font-medium text-secondary-400">
+                  VISION SOURCE
+                </span>{" "}
+                NETWORK
+              </div>
+            </Link>
+          </div>
           {/* RIGHT SIDE */}
-          {isAboveMediumScreens ? (
-            <div className="flex items-center justify-end gap-4">
-              <a href="tel:3104565590" className="text-nowrap text-lg">
-                (310) 456-5590
-              </a>
-              <button className="flex flex-row rounded border-2 border-slate-200 px-3 py-2 text-lg transition duration-[1000ms] ease-out hover:border-black">
-                <div className="flex gap-2">
-                  <CalendarDaysIcon className="h-7 w-7" />
-                  <Link to={`appointments`}>Appointments</Link>
-                </div>
-              </button>
-            </div>
-          ) : (
-            ""
-          )}
+          <div className="items-center justify-end gap-4 xs:hidden sm:hidden md:flex">
+            <a href="tel:3104565590" className="text-nowrap text-lg">
+              (310) 456-5590
+            </a>
+            <button className="flex flex-row rounded border-2 border-slate-200 px-3 py-2 text-lg transition duration-[1000ms] ease-out hover:border-black">
+              <div className="flex gap-2">
+                <CalendarDaysIcon className="h-7 w-7" />
+                <Link to={`appointments`}>Appointments</Link>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
+
       {/* NAVBAR LINKS */}
       <div className="mx-auto w-full">
         {isAboveMediumScreens ? (
@@ -151,6 +133,7 @@ const Navbar = (props: Props) => {
             </div>
           </div>
         ) : (
+          // NAVLINKS - MEDIA QUERY
           <div className="mx-auto flex justify-around bg-primary-300 md:w-5/6">
             <div className="flex basis-4/5 items-center justify-evenly">
               <div className=""></div>

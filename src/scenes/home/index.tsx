@@ -31,12 +31,20 @@ const Home = (props: Props) => {
                 communities.
               </p>
               {/* ACTION BUTTONS */}
-              <div className="right-[calc(100%-315px)] top-[calc(100%+10px)] flex flex-row gap-10 xs:mt-10 sm:mt-10 md:absolute md:m-0">
-                <div className="mx-auto flex w-[45%] items-center justify-center rounded bg-primary-300">
+              <div className="right-[calc(100%-315px)] top-[calc(100%+10px)] flex gap-10 xs:mt-10 xs:flex-col xs:items-center xs:gap-5 sm:mt-10 sm:flex-col sm:items-center sm:gap-5 md:absolute md:m-0 md:flex-row">
+                <div className="w-full">
+                  <Link
+                    className="flex items-center justify-center rounded bg-primary-300 py-4 md:w-[150px]"
+                    to={`/appointments`}
+                  >
+                    Appointments
+                  </Link>
+                </div>
+                {/* <div className="mx-auto flex w-[45%] items-center justify-center rounded bg-primary-300">
                   <div className="py-4 text-center transition duration-300 hover:text-white sm:w-[100px] md:w-[130px]">
                     <Link to={`appointments`}>Appointments</Link>
                   </div>
-                </div>
+                </div> */}
                 <div className="">
                   <p className="text-nowrap text-gray-400">OR GIVE US A CALL</p>
                   <a href="tel:3104565590" className="text-nowrap text-lg">
