@@ -1,4 +1,3 @@
-import useMediaQuery from "../../../hooks/useMediaQuery";
 import Card from "../cards/Card";
 import {
   ClipboardDocumentCheckIcon,
@@ -35,39 +34,21 @@ const cards: Array<{
 
 type Props = {};
 const Cards = ({}: Props) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
-    // <div className="absolute bottom-[-200px] z-40 mx-auto w-full bg-gray-20">
     <section className="bg-gray-20">
-      {isAboveMediumScreens ? (
-        <div className="w-full">
-          <ul className="mx-auto flex w-4/6 items-center justify-around bg-white md:pt-7">
-            {cards.map((card, index) => (
-              <Card
-                key={index}
-                name={card.name}
-                page={card.page}
-                description={card.description}
-                icon={card.icon}
-              />
-            ))}
-          </ul>
-        </div>
-      ) : (
-        <div className="bg-white">
-          <ul className="mx-auto flex w-4/6 flex-col gap-4 pt-10">
-            {cards.map((card, index) => (
-              <Card
-                key={index}
-                name={card.name}
-                page={card.page}
-                description={card.description}
-                icon={card.icon}
-              />
-            ))}
-          </ul>
-        </div>
-      )}
+      <div className="w-full">
+        <ul className="mx-auto flex items-center justify-around bg-white xs:flex-col sm:w-full sm:flex-col sm:gap-5 md:w-4/6 md:flex-row md:pt-7">
+          {cards.map((card, index) => (
+            <Card
+              key={index}
+              name={card.name}
+              page={card.page}
+              description={card.description}
+              icon={card.icon}
+            />
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };

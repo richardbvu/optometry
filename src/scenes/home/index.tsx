@@ -10,7 +10,6 @@ const Home = (props: Props) => {
   return (
     <section id="home" className="">
       <div className="w-full md:bg-gray-20">
-        {/* <div className="mx-auto w-4/6 md:relative md:h-[330px]"> */}
         <div className="mx-auto w-4/6 bg-white md:relative md:h-[350px]">
           <motion.div
             className="w-fit"
@@ -29,14 +28,13 @@ const Home = (props: Props) => {
               alt="hero-image"
             />
           </motion.div>
-
           {/* HOME TEXT  */}
           <div>
             <div className="left-[calc(43%-10px)] top-[calc(40%-120px)] md:absolute md:pr-3">
-              <p className="text-5xl xs:mt-10 sm:mt-10 md:mr-5 md:mt-5 md:w-[400px]">
+              <p className="text-5xl xs:mt-10 xs:text-center sm:mt-10 sm:text-center md:mr-5 md:mt-5 md:w-[400px] md:text-start">
                 Experience Modern Eye Care
               </p>
-              <p className="mt-5 text-lg md:w-[90%]">
+              <p className="mt-5 text-lg xs:text-center sm:text-center md:w-[90%] md:text-start">
                 Dr. Richard Optometry offers comprehensive eye care services and
                 in-demand lenses and frames to Torrance and the surrounding
                 communities.
@@ -51,7 +49,7 @@ const Home = (props: Props) => {
                     Appointments
                   </Link>
                 </div>
-                <div className="">
+                <div className="xs:mb-10 sm:mb-10 md:mb-0">
                   <p className="text-nowrap text-gray-400">OR GIVE US A CALL</p>
                   <a href="tel:3104565590" className="text-nowrap text-lg">
                     (310) 456-5590
