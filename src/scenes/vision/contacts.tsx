@@ -72,9 +72,12 @@ const Contacts = (props: Props) => {
               <p>
                 Regardless of the type of contact lenses you wear, an annual eye
                 exam is recommended to ensure the continued good health of your
-                eyes. Request an appointment for an assessment and advice at Dr.
-                Richard Imamoto Optometry in Torrance, and we will be in touch
-                with you shortly.
+                eyes.{" "}
+                <span className="font-bold hover:underline hover:underline-offset-2">
+                  <Link to={`/appointments`}>Request an appointment</Link>
+                </span>{" "}
+                for an assessment and advice at Dr. Richard Imamoto Optometry in
+                Torrance, and we will be in touch with you shortly.
               </p>
               <div className="rounded border-[1px] border-gray-50 p-5">
                 <img src={ContactsOptions} alt="contacts-options" />

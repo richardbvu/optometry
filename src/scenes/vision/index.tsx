@@ -20,8 +20,11 @@ const Vision = (props: Props) => {
             </p>
             <p className="pb-5">
               To learn more about the specific products we offer and conditions
-              we treat, please select one of the subcategories below and request
-              an appointment with your eye care provider.
+              we treat, please select one of the subcategories below and{" "}
+              <span className="font-bold hover:underline hover:underline-offset-2">
+                <Link to={`/appointments`}>request an appointment</Link>
+              </span>{" "}
+              with your eye care provider.
             </p>
             <HyperTextBox
               page="lenses"

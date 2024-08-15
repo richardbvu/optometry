@@ -28,7 +28,7 @@ const Lenses = (props: Props) => {
               without the right guidance. Dr. Richard Imamoto Optometry in
               Torrance makes the choice easy.
             </p>
-            <hr className="mb-5" />
+            <hr className="my-5" />
             <div className="flex flex-col gap-5">
               <p className="text-2xl">Eyeglasses</p>
               <p>
