@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import useMediaQuery from "../../hooks/useMediaQuery";
 import RequestAppointment from "../../shared/requestAppointment";
 import HyperTextBox from "../../shared/hyperTextBox";
 

@@ -20,6 +20,8 @@ import EyeDiseases from "./scenes/vision/eyeDiseases.tsx";
 import VisionProblems from "./scenes/vision/visionProblems.tsx";
 import ErrorPage from "./shared/errorPage.tsx";
 import SuspenseLayout from "./shared/suspenseLayout.tsx";
+import InsuranceInformation from "./scenes/patients/insuranceInformation.tsx";
+import PatientForms from "./scenes/patients/patientForms.tsx";
 
 const NavbarLazy = React.lazy(() => import("./scenes/navbar"));
 const HomeLazy = React.lazy(() => import("./scenes/home"));
@@ -31,8 +33,10 @@ function App() {
       <ScrollToTop />
       {/* <Suspense fallback={<div>Loading....</div>}> */}
       <Suspense fallback={<div></div>}>
+        {/* NAVBAR */}
         <NavbarLazy />
         <Routes>
+          {/* LAYOUT FOR HOME */}
           <Route
             path="/"
             element={
@@ -43,7 +47,7 @@ function App() {
           ></Route>
           {/* LAYOUT FOR ABOUT */}
           <Route path="about" element={<PageLayout />}>
-            {/* INSIDE PAGELAYOUT, THERE MUST BE A <OUTLET/> COMPONENT */}
+            {/* INSIDE PAGE LAYOUT, THERE MUST BE A <OUTLET/> COMPONENT */}
             {/* <Route index element={<About />} /> */}
             <Route
               index
@@ -65,24 +69,25 @@ function App() {
             <Route path="eye-diseases" element={<EyeDiseases />} />
             <Route path="vision-problems" element={<VisionProblems />} />
           </Route>
+          {/* LAYOUT FOR PROMOTIONS */}
           <Route path="promotions" element={<Promotions />}></Route>
-          <Route path="patients" element={<Patients />}></Route>
+          {/* LAYOUT FOR PATIENTS */}
+          <Route path="patients" element={<PageLayout />}>
+            <Route index element={<Patients />}></Route>
+            <Route
+              path="insurance-information"
+              element={<InsuranceInformation />}
+            ></Route>
+            <Route path="patient-forms" element={<PatientForms />}></Route>
+          </Route>
           <Route path="contact" element={<Contact />}></Route>
           <Route path="appointments" element={<Appointments />}></Route>
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
-
+        {/* FOOTER */}
         <Footer />
       </Suspense>
     </BrowserRouter>
-
-    // <div className="app">
-    //   <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-    //   <Home />
-    //   <Cards />
-    //   <HomeInfo />
-    //   <Footer />
-    // </div>
   );
 }
 

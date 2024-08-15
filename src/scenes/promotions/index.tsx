@@ -13,10 +13,9 @@ const Promotions = (props: Props) => {
             <h1 className="text-3xl">Promotions</h1>
             <p className="text-2xl text-gray-400">
               Visit this page regularly to view the latest promotions offered at
-              Dr. Nancy Imamoto Optometry in Gardena
+              Dr. Richard Imamoto Optometry in Torrance
             </p>
 
-            <hr className="my-5" />
             <div>
               <PromotionCode
                 date="December 31st, 2030"
@@ -24,7 +23,7 @@ const Promotions = (props: Props) => {
                 code="RICH2024"
               />
             </div>
-            <hr className="my-5" />
+
             <div>
               <PromotionCode
                 date="December 31st, 2030"

@@ -6,6 +6,7 @@ type Props = {
 const PromotionBox = ({ date, title, code }: Props) => {
   return (
     <div>
+      <hr className="my-5" />
       <div className="ml-4">
         <div className="flex flex-row justify-start gap-5">
           <div className="rounded bg-gray-50 px-5 py-2">Valid through :</div>
