@@ -12,8 +12,8 @@ const InsuranceInformation = (props: Props) => {
           <div className="flex basis-3/5 flex-col gap-3">
             <h1 className="text-3xl">Insurance Information</h1>
             <p className="text-2xl text-gray-400">
-              Dr. Nancy Imamoto Optometry works with many insurance carriers and
-              payment plans.
+              Dr. Richard Imamoto Optometry works with many insurance carriers
+              and payment plans.
               {/* CONTROL + SHIFT + L = FIND ALL INSTANCES */}
             </p>
             <p>

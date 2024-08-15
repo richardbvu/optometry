@@ -6,19 +6,28 @@ import {
   ShoppingBagIcon,
 } from "@heroicons/react/24/solid";
 
-const cards: Array<ClassType> = [
+const cards: Array<{
+  name: string;
+  page: string;
+  description: string;
+  icon: JSX.Element;
+}> = [
   {
     name: "Patient Forms",
+    page: "/patients/patient-forms",
     description: "Get the forms you need.",
     icon: <ClipboardDocumentCheckIcon />,
   },
   {
     name: "Specials",
+    page: "/promotions",
+
     description: "View our latest deals.",
     icon: <StarIcon />,
   },
   {
     name: "Shop Contacts",
+    page: "/vision/contacts",
     description: "Reorder contacts online.",
     icon: <ShoppingBagIcon />,
   },
@@ -37,6 +46,7 @@ const Cards = ({}: Props) => {
               <Card
                 key={index}
                 name={card.name}
+                page={card.page}
                 description={card.description}
                 icon={card.icon}
               />
@@ -50,6 +60,7 @@ const Cards = ({}: Props) => {
               <Card
                 key={index}
                 name={card.name}
+                page={card.page}
                 description={card.description}
                 icon={card.icon}
               />

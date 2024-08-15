@@ -22,6 +22,7 @@ import ErrorPage from "./shared/errorPage.tsx";
 import SuspenseLayout from "./shared/suspenseLayout.tsx";
 import InsuranceInformation from "./scenes/patients/insuranceInformation.tsx";
 import PatientForms from "./scenes/patients/patientForms.tsx";
+import ContactThankYou from "./scenes/contact/contactThankYou.tsx";
 
 const NavbarLazy = React.lazy(() => import("./scenes/navbar"));
 const HomeLazy = React.lazy(() => import("./scenes/home"));
@@ -80,7 +81,11 @@ function App() {
             ></Route>
             <Route path="patient-forms" element={<PatientForms />}></Route>
           </Route>
-          <Route path="contact" element={<Contact />}></Route>
+          <Route path="contact" element={<PageLayout />}>
+            <Route index element={<Contact />}></Route>
+            <Route path="thank-you" element={<ContactThankYou />}></Route>
+          </Route>
+
           <Route path="appointments" element={<Appointments />}></Route>
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>

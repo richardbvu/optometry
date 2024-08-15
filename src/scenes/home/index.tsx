@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import HeroImage from "../../assets/HeroImage.jpg";
 import Card from "./cards/index";
 import HomeInfo from "./homeInfo/index";
@@ -11,13 +12,23 @@ const Home = (props: Props) => {
       <div className="w-full md:bg-gray-20">
         {/* <div className="mx-auto w-4/6 md:relative md:h-[330px]"> */}
         <div className="mx-auto w-4/6 bg-white md:relative md:h-[350px]">
-          <div className="w-fit">
+          <motion.div
+            className="w-fit"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 1 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1 },
+            }}
+          >
             <img
               className="h-full xs:hidden sm:hidden md:flex"
               src={HeroImage}
               alt="hero-image"
             />
-          </div>
+          </motion.div>
 
           {/* HOME TEXT  */}
           <div>
@@ -40,11 +51,6 @@ const Home = (props: Props) => {
                     Appointments
                   </Link>
                 </div>
-                {/* <div className="mx-auto flex w-[45%] items-center justify-center rounded bg-primary-300">
-                  <div className="py-4 text-center transition duration-300 hover:text-white sm:w-[100px] md:w-[130px]">
-                    <Link to={`appointments`}>Appointments</Link>
-                  </div>
-                </div> */}
                 <div className="">
                   <p className="text-nowrap text-gray-400">OR GIVE US A CALL</p>
                   <a href="tel:3104565590" className="text-nowrap text-lg">

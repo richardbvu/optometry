@@ -6,7 +6,7 @@ const Contact = (props: Props) => {
   const navigate = useNavigate();
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    navigate("/");
+    navigate("/contact/thank-you");
   };
   return (
     <section>
