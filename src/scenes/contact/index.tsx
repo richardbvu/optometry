@@ -1,9 +1,13 @@
-import { Link, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import RequestAppointment from "../../shared/requestAppointment";
-import InsuranceOptions from "../../assets/InsuranceOptions.png";
 
 type Props = {};
 const Contact = (props: Props) => {
+  const navigate = useNavigate();
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    navigate("/");
+  };
   return (
     <section>
       <div className="w-full bg-gray-20">
@@ -16,8 +20,9 @@ const Contact = (props: Props) => {
               to request additional information about our services. We look
               forward to hearing from you.
             </p>
-            <div>
-              <div className="grid grid-rows-3 border-[1px] border-gray-50">
+            {/* CONTACT INFORMATION */}
+            <div className="mb-5">
+              <div className="grid grid-rows-3 border-[1px] border-gray-100">
                 <div className="flex items-center border-b-[1px] border-gray-50 p-5">
                   Dr. Richard Imamoto Optometry
                 </div>
@@ -41,6 +46,60 @@ const Contact = (props: Props) => {
                   </a>
                 </div>
               </div>
+            </div>
+            {/* FORM */}
+            <div className="border-[1px] border-gray-100 p-5">
+              <form action="" onSubmit={handleSubmit}>
+                <div className="mb-4 flex flex-col">
+                  <label htmlFor="name" className="font-2xl mb-2 text-lg">
+                    Name <span className="text-primary-500">*</span>
+                  </label>
+                  <input
+                    required
+                    id="name"
+                    type="text"
+                    className="h-8 rounded-sm border-[1px] border-black pl-1"
+                  />
+                </div>
+                <div className="mb-4 flex flex-col">
+                  <label htmlFor="phone" className="font-2xl mb-2 text-lg">
+                    Phone
+                  </label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    className="h-8 rounded-sm border-[1px] border-black pl-1"
+                  />
+                </div>
+                <div className="mb-4 flex flex-col">
+                  <label htmlFor="email" className="font-2xl mb-2 text-lg">
+                    Email <span className="text-primary-500">*</span>
+                  </label>
+                  <input
+                    required
+                    id="email"
+                    type="email"
+                    className="h-8 rounded-sm border-[1px] border-black pl-1"
+                  />
+                </div>
+                <div className="mb-4 flex flex-col">
+                  <label htmlFor="message" className="font-2xl mb-2 text-lg">
+                    Message
+                  </label>
+                  <textarea
+                    name=""
+                    id="message"
+                    rows={10}
+                    className="w-full border-[1px] border-black pl-1"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="h-[50px] w-[100px] rounded bg-primary-300 text-center"
+                >
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
           {/* RIGHT SIDE BAR */}
