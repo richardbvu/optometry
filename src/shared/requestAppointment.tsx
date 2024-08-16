@@ -1,5 +1,4 @@
-import { CalendarDaysIcon } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
+import AppointmentsButton from "../shared/appointmentsButton";
 
 type Props = {};
 const RequestAppointment = (props: Props) => {
@@ -12,15 +11,7 @@ const RequestAppointment = (props: Props) => {
         </p>
       </div>
       <div className="mt-5">
-        <Link
-          className="flex w-[200px] items-center justify-center gap-4 rounded bg-primary-300 py-4"
-          to={`/appointments`}
-        >
-          <div className="h-6 w-6">
-            <CalendarDaysIcon />
-          </div>
-          Appointments
-        </Link>
+        <AppointmentsButton />
       </div>
       <div className="mt-4">
         <a href="tel:3104565590" className="text-nowrap text-lg">

@@ -37,7 +37,7 @@ const Cards = ({}: Props) => {
   return (
     <section className="bg-gray-20">
       <div className="w-full">
-        <ul className="mx-auto flex items-center justify-around bg-white xs:flex-col sm:w-full sm:flex-col sm:gap-5 md:w-4/6 md:flex-row md:pt-7">
+        <ul className="mx-auto flex items-center justify-around bg-white xs:flex-col xs:gap-5 sm:w-full sm:flex-col sm:gap-5 md:w-4/6 md:flex-row md:pt-7">
           {cards.map((card, index) => (
             <Card
               key={index}

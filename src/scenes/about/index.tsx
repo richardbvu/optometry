@@ -73,14 +73,7 @@ const About = (props: Props) => {
               </div>
               <div className="hover:text-primary-500">
                 <div className="ml-5">
-                  <NavLink
-                    // className={({ isActive, isPending }) => {
-                    //   return isActive ? "ml-5 font-bold" : "";
-                    // }}
-                    to={"doctors-staff"}
-                  >
-                    Doctors & Staff
-                  </NavLink>
+                  <NavLink to={"doctors-staff"}>Doctors & Staff</NavLink>
                 </div>
               </div>
             </div>

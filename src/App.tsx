@@ -19,10 +19,10 @@ import EyeConditions from "./scenes/vision/eyeConditions.tsx";
 import EyeDiseases from "./scenes/vision/eyeDiseases.tsx";
 import VisionProblems from "./scenes/vision/visionProblems.tsx";
 import ErrorPage from "./shared/errorPage.tsx";
-import SuspenseLayout from "./shared/suspenseLayout.tsx";
 import InsuranceInformation from "./scenes/patients/insuranceInformation.tsx";
 import PatientForms from "./scenes/patients/patientForms.tsx";
 import ContactThankYou from "./scenes/contact/contactThankYou.tsx";
+import AppointmentsThankYou from "./scenes/appointments/appointmentsThankYou.tsx";
 
 const NavbarLazy = React.lazy(() => import("./scenes/navbar"));
 const HomeLazy = React.lazy(() => import("./scenes/home"));
@@ -37,7 +37,7 @@ function App() {
         {/* NAVBAR */}
         <NavbarLazy />
         <Routes>
-          {/* LAYOUT FOR HOME */}
+          {/* HOME */}
           <Route
             path="/"
             element={
@@ -46,7 +46,7 @@ function App() {
               /* </Suspense> */
             }
           ></Route>
-          {/* LAYOUT FOR ABOUT */}
+          {/* ABOUT */}
           <Route path="about" element={<PageLayout />}>
             {/* INSIDE PAGE LAYOUT, THERE MUST BE A <OUTLET/> COMPONENT */}
             {/* <Route index element={<About />} /> */}
@@ -60,7 +60,7 @@ function App() {
             />
             <Route path="doctors-staff" element={<DoctorsAndStaff />} />
           </Route>
-          {/* LAYOUT FOR VISION */}
+          {/* VISION */}
           <Route path="vision" element={<PageLayout />}>
             <Route index element={<Vision />} />
             <Route path="lenses" element={<Lenses />} />
@@ -70,9 +70,9 @@ function App() {
             <Route path="eye-diseases" element={<EyeDiseases />} />
             <Route path="vision-problems" element={<VisionProblems />} />
           </Route>
-          {/* LAYOUT FOR PROMOTIONS */}
+          {/* PROMOTIONS */}
           <Route path="promotions" element={<Promotions />}></Route>
-          {/* LAYOUT FOR PATIENTS */}
+          {/* PATIENTS */}
           <Route path="patients" element={<PageLayout />}>
             <Route index element={<Patients />}></Route>
             <Route
@@ -81,12 +81,17 @@ function App() {
             ></Route>
             <Route path="patient-forms" element={<PatientForms />}></Route>
           </Route>
+          {/* CONTACT */}
           <Route path="contact" element={<PageLayout />}>
             <Route index element={<Contact />}></Route>
             <Route path="thank-you" element={<ContactThankYou />}></Route>
           </Route>
-
-          <Route path="appointments" element={<Appointments />}></Route>
+          {/* APPOINTMENTS */}
+          <Route path="appointments" element={<PageLayout />}>
+            <Route index element={<Appointments />}></Route>
+            <Route path="thank-you" element={<AppointmentsThankYou />}></Route>
+          </Route>
+          {/* ERROR */}
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
         {/* FOOTER */}

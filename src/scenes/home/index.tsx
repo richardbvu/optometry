@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import HeroImage from "../../assets/HeroImage.jpg";
 import Card from "./cards/index";
 import HomeInfo from "./homeInfo/index";
-import { Link } from "react-router-dom";
+import AppointmentsButton from "../../shared/appointmentsButton";
 
 type Props = {};
 
@@ -41,14 +41,7 @@ const Home = (props: Props) => {
               </p>
               {/* ACTION BUTTONS */}
               <div className="right-[calc(100%-315px)] top-[calc(100%+10px)] flex gap-10 xs:mt-10 xs:flex-col xs:items-center xs:gap-5 sm:mt-10 sm:flex-col sm:items-center sm:gap-5 md:absolute md:m-0 md:flex-row">
-                <div className="w-full">
-                  <Link
-                    className="flex items-center justify-center rounded bg-primary-300 py-4 md:w-[150px]"
-                    to={`/appointments`}
-                  >
-                    Appointments
-                  </Link>
-                </div>
+                <AppointmentsButton />
                 <div className="xs:mb-10 sm:mb-10 md:mb-0">
                   <p className="text-nowrap text-gray-400">OR GIVE US A CALL</p>
                   <a href="tel:3104565590" className="text-nowrap text-lg">

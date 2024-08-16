@@ -16,8 +16,8 @@ const Contact = (props: Props) => {
           <div className="flex basis-3/5 flex-col gap-3">
             <h1 className="text-3xl">Contact Us</h1>
             <p className="text-2xl text-gray-400">
-              Contact Dr. Nancy Imamoto Optometry to schedule an appointment or
-              to request additional information about our services. We look
+              Contact Dr. Richard Imamoto Optometry to schedule an appointment
+              or to request additional information about our services. We look
               forward to hearing from you.
             </p>
             {/* CONTACT INFORMATION */}
@@ -40,7 +40,7 @@ const Contact = (props: Props) => {
                     <div>Torrance, CA 90248</div>
                   </div>
                 </div>
-                <div className="ml-5 flex items-center border-t-[1px] border-gray-20">
+                <div className="flex items-center border-t-[1px] border-gray-50 pl-5">
                   <a href="mailto:staff.richardoptometry.com">
                     staff.richardoptometry.com
                   </a>
@@ -48,7 +48,7 @@ const Contact = (props: Props) => {
               </div>
             </div>
             {/* FORM */}
-            <div className="border-[1px] border-gray-100 p-5">
+            <fieldset className="border-[1px] border-gray-100 p-5">
               <form action="" onSubmit={handleSubmit}>
                 <div className="mb-4 flex flex-col">
                   <label htmlFor="name" className="font-2xl mb-2 text-lg">
@@ -67,6 +67,7 @@ const Contact = (props: Props) => {
                   </label>
                   <input
                     id="phone"
+                    pattern="^-?[0-9]\d*\.?\d*$"
                     type="tel"
                     className="h-8 rounded-sm border-[1px] border-black pl-1"
                   />
@@ -100,7 +101,7 @@ const Contact = (props: Props) => {
                   Submit
                 </button>
               </form>
-            </div>
+            </fieldset>
           </div>
           {/* RIGHT SIDE BAR */}
           <div className="flex basis-1/5 flex-col rounded border-[1px] border-gray-50 p-10 md:ml-5">

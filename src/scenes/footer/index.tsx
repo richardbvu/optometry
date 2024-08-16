@@ -60,7 +60,7 @@ const Footer = (props: Props) => {
               </div>
               <div className="mt-5 flex xs:justify-center sm:justify-center md:justify-start">
                 <a
-                  className="flex w-[150px] items-center justify-center gap-4 rounded bg-primary-300 py-4"
+                  className="flex w-[150px] items-center justify-center gap-4 rounded bg-primary-300 py-4 transition duration-200 hover:bg-primary-500 hover:text-white"
                   href="mailto:staff.richardoptometry.com"
                 >
                   <div className="h-6 w-6">

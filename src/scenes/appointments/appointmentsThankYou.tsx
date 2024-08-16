@@ -1,7 +1,7 @@
 import RequestAppointment from "../../shared/requestAppointment";
 
 type Props = {};
-const ContactThankYou = (props: Props) => {
+const AppointmentsThankYou = (props: Props) => {
   return (
     <section>
       <div className="w-full bg-gray-20">
@@ -14,9 +14,9 @@ const ContactThankYou = (props: Props) => {
               you shortly.
             </p>
             <p className="italic">
-              If you're attempting to make an appointment, please not that the
-              date and time you requested may not be available. We will contact
-              you you to confirm an exact date and time for your appointment.
+              Please note that the date and time you requested may not be
+              available. We will contact you to confirm an exact datte and time
+              for yor appointment.
             </p>
           </div>
           {/* RIGHT SIDE BAR */}
@@ -29,4 +29,4 @@ const ContactThankYou = (props: Props) => {
     </section>
   );
 };
-export default ContactThankYou;
+export default AppointmentsThankYou;
