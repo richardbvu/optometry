@@ -11,8 +11,6 @@ export default {
         "primary-100": "#FFE1E0",
         "primary-300": "#FFA6A3",
         "primary-500": "#FF6B66",
-        "secondary-400": "#FFCD5B",
-        "secondary-500": "#FFC132",
       },
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
@@ -32,7 +30,6 @@ export default {
       xs: "480px",
       sm: "768px",
       md: "1060px",
-      // md: "980px",
     },
   },
   plugins: [],
