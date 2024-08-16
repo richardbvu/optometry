@@ -9,8 +9,7 @@ import { useLocation } from "react-router-dom";
 //   }, [pathname]);
 // }
 
-type Props = {};
-const scrollToTop = (props: Props) => {
+const scrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
