@@ -1,7 +1,6 @@
 import RequestAppointment from "../../shared/requestAppointment";
 
-type Props = {};
-const AppointmentsThankYou = (props: Props) => {
+const AppointmentsThankYou = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">

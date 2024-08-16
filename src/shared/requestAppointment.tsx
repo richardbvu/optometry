@@ -1,7 +1,6 @@
 import AppointmentsButton from "../shared/appointmentsButton";
 
-type Props = {};
-const RequestAppointment = (props: Props) => {
+const RequestAppointment = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex flex-col gap-4 pb-4">

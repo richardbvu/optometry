@@ -1,10 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
-import useMediaQuery from "../../hooks/useMediaQuery";
 import RequestAppointment from "../../shared/requestAppointment";
 import HyperTextBox from "../../shared/hyperTextBox";
 
-type Props = {};
-const Patients = (props: Props) => {
+const Patients = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">
@@ -15,7 +13,6 @@ const Patients = (props: Props) => {
             <p className="text-2xl text-gray-400">
               Your source for insurance information and patient forms for Dr.
               Richard Imamoto Optometry in Torrance
-              {/* CONTROL + SHIFT + L = FIND ALL INSTANCES */}
             </p>
             <p>
               For your convenience, we have created the following pages to

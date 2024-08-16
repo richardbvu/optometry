@@ -1,13 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
-import useMediaQuery from "../../hooks/useMediaQuery";
 import RequestAppointment from "../../shared/requestAppointment";
-import HyperTextBox from "../../shared/hyperTextBox";
 import PatientPhysicalForm from "./patientPhysicalForm";
 import PatientHistoryQuestionnaire from "../../assets/Patient-History-Questionnaire.pdf";
 import SpanishPatientHistoryQuestionnaire from "../../assets/Spanish-Patient-History-Questionnaire.pdf";
 
-type Props = {};
-const PatientForms = (props: Props) => {
+const PatientForms = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">

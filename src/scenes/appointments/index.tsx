@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-type Props = {};
-const Appointments = (props: Props) => {
+const Appointments = () => {
   const navigate = useNavigate();
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();

@@ -1,5 +1,4 @@
-type Props = {};
-const ErrorPage = (props: Props) => {
+const ErrorPage = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">

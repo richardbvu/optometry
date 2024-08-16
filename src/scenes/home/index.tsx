@@ -4,9 +4,7 @@ import Card from "./cards/index";
 import HomeInfo from "./homeInfo/index";
 import AppointmentsButton from "../../shared/appointmentsButton";
 
-type Props = {};
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <section id="home" className="">
       <div className="w-full md:bg-gray-20">

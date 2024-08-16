@@ -1,12 +1,8 @@
-import { CalendarDaysIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Link, NavLink } from "react-router-dom";
-import useMediaQuery from "../../hooks/useMediaQuery";
 import RequestAppointment from "../../shared/requestAppointment";
 import HyperTextBox from "../../shared/hyperTextBox";
 
-type Props = {};
-const About = (props: Props) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+const About = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">
@@ -17,7 +13,6 @@ const About = (props: Props) => {
             <p className="text-2xl text-gray-400">
               We are a licensed provider of quality vision care products and
               personalized optometric services in Torrance.
-              {/* CONTROL + SHIFT + L = FIND ALL INSTANCES */}
             </p>
             <p>
               Since 2015, Dr. Richard Imamoto Optometry has offered provider of
@@ -40,7 +35,7 @@ const About = (props: Props) => {
               <span className="font-bold hover:underline hover:underline-offset-2">
                 <Link to={``}>problems</Link>
               </span>
-              .{/* ADD IN LINKS */}
+              .
             </p>
             <p>
               In our mission to provide the best eye care services possible, our

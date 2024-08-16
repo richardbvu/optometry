@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
-type Props = {};
-const appointmentsButton = (props: Props) => {
+const appointmentsButton = () => {
   return (
     <div className="w-full">
       <Link

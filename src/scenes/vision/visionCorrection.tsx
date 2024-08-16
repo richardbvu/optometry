@@ -1,8 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import RequestAppointment from "../../shared/requestAppointment";
 
-type Props = {};
-const VisionCorrection = (props: Props) => {
+const VisionCorrection = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">

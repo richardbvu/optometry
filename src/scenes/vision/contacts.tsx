@@ -2,8 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import RequestAppointment from "../../shared/requestAppointment";
 import ContactsOptions from "../../assets/ContactsOptions.png";
 
-type Props = {};
-const Contacts = (props: Props) => {
+const Contacts = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">

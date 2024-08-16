@@ -2,8 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import RequestAppointment from "../../shared/requestAppointment";
 import HyperTextBox from "../../shared/hyperTextBox";
 
-type Props = {};
-const Vision = (props: Props) => {
+const Vision = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">

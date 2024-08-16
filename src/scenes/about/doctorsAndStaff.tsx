@@ -1,8 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import RequestAppointment from "../../shared/requestAppointment";
 
-type Props = {};
-const DoctorsAndStaff = (props: Props) => {
+const DoctorsAndStaff = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">
@@ -25,18 +24,10 @@ const DoctorsAndStaff = (props: Props) => {
               </div>
               <div className="hover:text-primary-500">
                 <div className="ml-5 font-bold">
-                  <NavLink
-                    // className={({ isActive, isPending }) => {
-                    //   return isActive ? "font-bold" : "";
-                    // }}
-                    to={"."}
-                  >
-                    Doctors & Staff
-                  </NavLink>
+                  <NavLink to={"."}>Doctors & Staff</NavLink>
                 </div>
               </div>
             </div>
-
             <RequestAppointment />
           </div>
         </div>

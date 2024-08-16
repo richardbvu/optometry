@@ -2,8 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import RequestAppointment from "../../shared/requestAppointment";
 import LensesOptions from "../../assets/LensesOptions.png";
 
-type Props = {};
-const Lenses = (props: Props) => {
+const Lenses = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">
@@ -14,7 +13,6 @@ const Lenses = (props: Props) => {
             <p className="text-2xl text-gray-400">
               A brief description of the types of lenses and variety of frames
               available at Dr. Richard Imamoto Optometry in Torrance.
-              {/* CONTROL + SHIFT + L = FIND ALL INSTANCES */}
             </p>
             <p className="">
               Selecting your lenses and frames is a very personal choice. A wide

@@ -1,9 +1,7 @@
-import { Link, NavLink } from "react-router-dom";
 import RequestAppointment from "../../shared/requestAppointment";
 import PromotionCode from "../../shared/promotionCode";
 
-type Props = {};
-const Promotions = (props: Props) => {
+const Promotions = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">

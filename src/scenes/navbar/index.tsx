@@ -7,8 +7,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-type Props = {};
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   return (

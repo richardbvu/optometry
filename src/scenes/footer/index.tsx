@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 
-type Props = {};
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <footer className="bg-gray-50">
       <div className="w-full bg-gray-20">

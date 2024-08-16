@@ -1,8 +1,7 @@
 import { ClockIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
-type Props = {};
-const HomeInfo = (props: Props) => {
+const HomeInfo = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <section className="">
@@ -20,7 +19,6 @@ const HomeInfo = (props: Props) => {
               Our experienced eye doctor offers comprehensive vision
               examinations at our Torrance optometry office and are trained in
               the diagnosis and treatment of a wide array of eye diseases,
-              {/* LINKS TO THESE PAGES LATER */}
               conditions, and problems. We use advanced diagnostic technology
               and vision correction products and are committed to improving the
               quality of life of persons in the Torrance community through
@@ -123,9 +121,6 @@ const HomeInfo = (props: Props) => {
                   </div>
                 </div>
                 <div className="flex w-full">
-                  {/* <div className="h-6 w-6">
-                    <ClockIcon />
-                  </div> */}
                   <div className="flex flex-col gap-1">
                     <p>
                       <span className="font-bold">Monday :</span> 10:00am -

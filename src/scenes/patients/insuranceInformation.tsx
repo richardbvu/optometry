@@ -2,8 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import RequestAppointment from "../../shared/requestAppointment";
 import InsuranceOptions from "../../assets/InsuranceOptions.png";
 
-type Props = {};
-const InsuranceInformation = (props: Props) => {
+const InsuranceInformation = () => {
   return (
     <section>
       <div className="w-full bg-gray-20">
@@ -14,7 +13,6 @@ const InsuranceInformation = (props: Props) => {
             <p className="text-2xl text-gray-400">
               Dr. Richard Imamoto Optometry works with many insurance carriers
               and payment plans.
-              {/* CONTROL + SHIFT + L = FIND ALL INSTANCES */}
             </p>
             <p>
               To see if we work with your insurance carrier or vision care plan,
