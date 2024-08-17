@@ -20,7 +20,7 @@ const Navbar = () => {
               <div className="text-3xl">DR. RICHARD OPTOMETRY</div>
               <div className="text-nowrap text-lg font-light text-gray-400">
                 MEMBER{" "}
-                <span className="font-medium text-secondary-400">
+                <span className="text-secondary-400 font-medium">
                   VISION SOURCE
                 </span>{" "}
                 NETWORK
@@ -135,8 +135,6 @@ const Navbar = () => {
           // NAVLINKS - MEDIA QUERY
           <div className="mx-auto flex justify-around bg-primary-300 md:w-5/6">
             <div className="flex basis-4/5 items-center justify-evenly">
-              <div className=""></div>
-
               <div className="">
                 <a
                   className="px-66 py-4 transition duration-300 hover:text-white"
@@ -146,18 +144,16 @@ const Navbar = () => {
                 </a>
               </div>
               <div className="w-fit text-center transition duration-300 hover:text-white">
-                <div>
-                  <NavLink
-                    to={`appointments`}
-                    className={({ isActive }) =>
-                      isActive
-                        ? "z-0 bg-primary-500 px-6 py-[17px] text-white"
-                        : "z-0 bg-primary-300 px-6 py-4"
-                    }
-                  >
-                    Appointments
-                  </NavLink>
-                </div>
+                <NavLink
+                  to={`appointments`}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "z-0 bg-primary-500 px-6 py-[17px] text-white"
+                      : "z-0 bg-primary-300 px-6 py-4"
+                  }
+                >
+                  Appointments
+                </NavLink>
               </div>
             </div>
             <button
@@ -179,49 +175,63 @@ const Navbar = () => {
             </div>
             {/* MENU ITEMS */}
             <div className="flex flex-col items-center">
-              <div className="mx-auto flex flex-col items-center justify-around bg-primary-300 md:w-4/6">
-                <div
-                  onClick={() => setIsMenuToggled(!isMenuToggled)}
-                  className="my-4 w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
-                >
-                  <Link to={"/"}>Home</Link>
-                </div>
-                <div
-                  onClick={() => setIsMenuToggled(!isMenuToggled)}
-                  className="my-4 w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
-                >
-                  <Link to={"about"}>About</Link>
-                </div>
-                <div
-                  onClick={() => setIsMenuToggled(!isMenuToggled)}
-                  className="my-4 w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
-                >
-                  <Link to={"vision"}>Vision</Link>
-                </div>
-                <div
-                  onClick={() => setIsMenuToggled(!isMenuToggled)}
-                  className="my-4 w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
-                >
-                  <Link to={"promotions"}>Promotions</Link>
-                </div>
-                <div
-                  onClick={() => setIsMenuToggled(!isMenuToggled)}
-                  className="my-4 w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
-                >
-                  <Link to={"patients"}>Patients</Link>
-                </div>
-                <div
-                  onClick={() => setIsMenuToggled(!isMenuToggled)}
-                  className="my-4 w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
-                >
-                  <Link to={"contact"}>Contact</Link>
-                </div>
-                <div
-                  onClick={() => setIsMenuToggled(!isMenuToggled)}
-                  className="my-4 w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
-                >
-                  <Link to={"appointments"}>Appointments</Link>
-                </div>
+              <div className="mx-auto flex flex-col items-center justify-around gap-8 bg-primary-300 md:w-4/6">
+                <Link to={"/"}>
+                  <div
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    className="h-fit w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                  >
+                    Home
+                  </div>
+                </Link>
+                <Link to={"about"}>
+                  <div
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    className="h-fit w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                  >
+                    About
+                  </div>
+                </Link>
+                <Link to={"vision"}>
+                  <div
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    className="h-fit w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                  >
+                    Vision
+                  </div>
+                </Link>
+                <Link to={"promotions"}>
+                  <div
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    className="h-fit w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                  >
+                    Promotions
+                  </div>
+                </Link>
+                <Link to={"patients"}>
+                  <div
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    className="h-fit w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                  >
+                    Patients
+                  </div>
+                </Link>
+                <Link to={"contact"}>
+                  <div
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    className="h-fit w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                  >
+                    Contact
+                  </div>
+                </Link>
+                <Link to={"appointments"}>
+                  <div
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    className="h-fit w-fit text-center underline underline-offset-8 transition duration-300 hover:text-white"
+                  >
+                    Appointments
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

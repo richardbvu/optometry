@@ -3,6 +3,7 @@ import HeroImage from "../../assets/HeroImage.jpg";
 import Card from "./cards/index";
 import HomeInfo from "./homeInfo/index";
 import AppointmentsButton from "../../shared/appointmentsButton";
+import { Outlet } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -53,6 +54,7 @@ const Home = () => {
       </div>
       <Card />
       <HomeInfo />
+      <Outlet />
     </section>
   );
 };
