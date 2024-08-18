@@ -1,6 +1,6 @@
 # About the project
 
-A modern and responsive website for an optometrist's office, developed using TypeScript, Tailwind CSS, and React. The site is designed to provide a seamless user experience while showcasing the optometrist's services, expertise, contact information and appointment booking.
+A modern and responsive website for an optometrist's office, developed using TypeScript, Tailwind CSS, and React. Developed to provide a seamless user experience while showcasing the optometrist's services, expertise, contact information and appointment booking.
 
 
 Live Demo : [Live Demo](https://richard-optometry.vercel.app/)
