@@ -3,7 +3,7 @@
 xxx
 
 
-Live Demo : [Live Demo]([https://coin-finale.vercel.app/](https://richard-optometry.vercel.app/))
+Live Demo : [Live Demo](https://richard-optometry.vercel.app/)
 
 # Screenshot of the Project 
 
