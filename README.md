@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# About the project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive website for an optometrist's office, developed using TypeScript, Tailwind CSS, and React. Showcasing the optometrist's services, expertise, contact information and appointment booking.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live Demo : [Live Demo](https://richard-optometry.vercel.app/)
 
-## Expanding the ESLint configuration
+# Screenshot of the Project 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<h3 align="center">Home Page</h3>
 
-- Configure the top-level `parserOptions` property like this:
+![Screenshot of Home Page](https://github.com/richardbvu/optometry/blob/main/src/assets/screenshot-optometry.png)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# How It's Made
+Built with : 
+* TypeScript
+* Tailwind
+* React
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+This project was purposefully developed using TypeScript, Tailwind, and React to showcase my proficiency with these technologies.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+# Lessons Learned
+I've learned countless lessons that I'm proud of. Here's some lessons that I'd like to share: 
+
+* Utilized TypeScript to enhance type safety and code maintainability, minimizing potential bugs and contributing to a more streamlined development process.
+* Leveraged Tailwind CSS for its utility-first styling approach, which allows for rapid UI development while maintaining a focus on simplicity and consistency.
+* Produced dynamic routes using React Router 6.26 that responds to user interactions, allowing seamless transitions between the application’s diverse offerings.
+* Designed and executed a strategy to defer the loading of non-critical resources at page load, allowing for quicker initial page renders and a more efficient use of bandwidth.
+
