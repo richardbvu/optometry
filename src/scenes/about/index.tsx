@@ -25,15 +25,15 @@ const About = () => {
               offer comprehensive vision examinations and are trained in the
               diagnosis and treatment of a wide array of{" "}
               <span className="font-bold hover:underline hover:underline-offset-2">
-                <Link to={``}>eye diseases</Link>
+                <Link to={`/vision/eye-diseases`}>eye diseases</Link>
               </span>
               ,{" "}
               <span className="font-bold hover:underline hover:underline-offset-2">
-                <Link to={``}>conditions</Link>
+                <Link to={`/vision/eye-conditions`}>conditions</Link>
               </span>
               , and{" "}
               <span className="font-bold hover:underline hover:underline-offset-2">
-                <Link to={``}>problems</Link>
+                <Link to={`/vision/vision-problems`}>problems</Link>
               </span>
               .
             </p>
